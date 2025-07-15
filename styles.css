@@ -567,7 +567,6 @@ html {
 /* Hover effects for intro stickers */
 .intro-sticker:hover {
     transform: scale(1.05) translateY(0);
-    z-index: 10;
 }
 
 /* Intro separator line */
