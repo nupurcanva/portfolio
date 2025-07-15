@@ -1,5 +1,5 @@
 /* Import Web Font */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap');
 
 /* Reset and Base Styles */
 * {
@@ -9,7 +9,7 @@
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: #f5f5f5;
     color: #000;
     line-height: 1.6;
@@ -56,14 +56,14 @@ html {
     font-size: 14px;
     font-weight: 400;
     color: #374151;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Figtree', sans-serif;
 }
 
 .header-subtitle {
     font-size: 13.6px;
     font-weight: 400;
     color: #374151;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Figtree', sans-serif;
 }
 
 /* Hero Gallery */
@@ -299,7 +299,7 @@ html {
 .see-more-text {
     font-size: 13.6px;
     color: #000;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Figtree', sans-serif;
 }
 
 .see-more-icon {
@@ -349,7 +349,7 @@ html {
     padding: 8px 0;
     border-bottom: 2px solid transparent;
     transition: all 0.3s ease;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Figtree', sans-serif;
 }
 
 .nav-tab.active {
@@ -432,7 +432,7 @@ html {
     font-size: 15.3px;
     color: #000;
     margin-bottom: 16px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Figtree', sans-serif;
 }
 
 .about-title {
@@ -441,14 +441,14 @@ html {
     color: #000;
     line-height: 1.2;
     margin-bottom: 32px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Figtree', sans-serif;
 }
 
 .about-description {
     font-size: 11.9px;
     color: #6b7280;
     line-height: 1.7;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Figtree', sans-serif;
 }
 
 .about-right {
@@ -475,7 +475,7 @@ html {
     font-size: 20.4px;
     font-weight: 400;
     color: #374151;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Figtree', sans-serif;
 }
 
 .section-icon {
@@ -612,7 +612,7 @@ html {
     color: #000;
     line-height: 1.4;
     word-break: break-word;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Figtree', sans-serif;
     margin-top: auto;
 }
 
@@ -651,7 +651,7 @@ html {
     font-size: 20.4px;
     font-weight: 400;
     color: #374151;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Figtree', sans-serif;
 }
 
 .column-icon {
@@ -705,14 +705,14 @@ html {
     border-radius: 999px;
     font-size: 10.2px;
     width: fit-content;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Figtree', sans-serif;
 }
 
 .experience-card h4 {
     font-size: 11.9px;
     color: #6b7280;
     font-weight: 400;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Figtree', sans-serif;
 }
 
 .experience-card p {
@@ -720,7 +720,7 @@ html {
     color: #374151;
     line-height: 1.8;
     flex-grow: 1;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Figtree', sans-serif;
 }
 
 .date-range {
@@ -782,7 +782,7 @@ html {
     font-size: 13.6px;
     color: #374151;
     line-height: 1.8;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Figtree', sans-serif;
 }
 
 .skills-section {
@@ -801,7 +801,7 @@ html {
 .skills-header h4 {
     font-size: 17px;
     color: #374151;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Figtree', sans-serif;
     margin: 0;
 }
 
@@ -814,7 +814,7 @@ html {
 .skill-item p {
     font-size: 13.6px;
     color: #374151;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Figtree', sans-serif;
     margin: 0;
 }
 
@@ -867,26 +867,26 @@ html {
     border-radius: 999px;
     font-size: 10.2px;
     width: fit-content;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Figtree', sans-serif;
 }
 
 .education-card h4 {
     font-size: 11.9px;
     color: #d1d5db;
     font-weight: 400;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Figtree', sans-serif;
 }
 
 .education-card .degree {
     font-size: 13.6px;
     color: #fff;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Figtree', sans-serif;
 }
 
 .education-card .institution {
     font-size: 11.9px;
     color: #d1d5db;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Figtree', sans-serif;
 }
 
 .softskills-section {
@@ -898,7 +898,7 @@ html {
 .softskills-section .skills-header h4 {
     font-size: 17px;
     color: #374151;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Figtree', sans-serif;
     margin: 0;
 }
 
@@ -914,7 +914,7 @@ html {
     padding: 6px 12px;
     border-radius: 999px;
     font-size: 11.9px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Figtree', sans-serif;
 }
 
 /* Microsoft Experience Section */
@@ -948,14 +948,14 @@ html {
     border-radius: 999px;
     font-size: 10.2px;
     width: fit-content;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Figtree', sans-serif;
 }
 
 .microsoft-card h4 {
     font-size: 11.9px;
     color: #6b7280;
     font-weight: 400;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Figtree', sans-serif;
 }
 
 .microsoft-card p {
@@ -963,7 +963,7 @@ html {
     color: #374151;
     line-height: 1.8;
     flex-grow: 1;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Figtree', sans-serif;
 }
 
 .microsoft-card .date-range {
@@ -1000,7 +1000,7 @@ html {
     font-size: 20.4px;
     font-weight: 400;
     color: #374151;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Figtree', sans-serif;
 }
 
 .work-icon {
@@ -1054,14 +1054,14 @@ html {
     border-radius: 999px;
     font-size: 10.2px;
     width: fit-content;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Figtree', sans-serif;
 }
 
 .project-card h4 {
     font-size: 11.9px;
     color: #6b7280;
     font-weight: 400;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Figtree', sans-serif;
 }
 
 .project-card p {
@@ -1069,21 +1069,21 @@ html {
     color: #374151;
     line-height: 1.8;
     flex-grow: 1;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Figtree', sans-serif;
 }
 
 .project-company {
     font-size: 13.6px;
     color: #000;
     font-weight: 500;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Figtree', sans-serif;
 }
 
 .project-role {
     font-size: 13.6px;
     color: #000;
     line-height: 1.8;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Figtree', sans-serif;
 }
 
 .project-dates {
@@ -1093,7 +1093,7 @@ html {
     font-size: 10.2px;
     color: #6b7280;
     margin-top: auto;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Figtree', sans-serif;
     position: relative;
 }
 
