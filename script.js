@@ -205,6 +205,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // Project clickable section handlers
+    const projectClickableSections = document.querySelectorAll('.project-clickable-section');
+    projectClickableSections.forEach(section => {
+        section.addEventListener('click', function() {
+            const project = this.getAttribute('data-project');
+            if (project) {
+                // Navigate to project page - you can customize this URL
+                window.open(`/${project}.html`, '_blank');
+            }
+        });
+    });
+    
     // Responsive navigation handling
     function handleResponsiveNav() {
         const nav = document.querySelector('.main-nav');
@@ -345,6 +357,38 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         introObserver.observe(introVideo);
+    }
+    
+    // Project sticker animations
+    function animateProjectStickers() {
+        const projectStickers = document.querySelectorAll('.project-sticker');
+        
+        projectStickers.forEach((sticker, index) => {
+            const delay = index * 200; // Staggered animation
+            
+            setTimeout(() => {
+                sticker.classList.add('animate');
+            }, delay);
+        });
+    }
+
+    // Start project sticker animations when work section is in view
+    const workSection = document.querySelector('.work-section');
+    if (workSection) {
+        const workObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        animateProjectStickers();
+                    }, 400); // Delay after work section appears
+                    workObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.3 // Trigger when 30% of work section is visible
+        });
+        
+        workObserver.observe(workSection);
     }
     
     // Add click tracking for analytics (if needed)
