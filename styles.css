@@ -115,29 +115,7 @@ html {
     --rotation: 11deg;
 }
 
-.sticker-2 {
-    top: 169px;
-    left: 650px;
-    width: 18px;
-    height: 18px;
-    --rotation: 191deg;
-}
 
-.sticker-2 img {
-    transform: rotate(var(--rotation, 0deg)) scaleY(-1);
-}
-
-.sticker-3 {
-    top: 28px;
-    left: 679px;
-    width: 18px;
-    height: 18px;
-    --rotation: 191deg;
-}
-
-.sticker-3 img {
-    transform: rotate(var(--rotation, 0deg)) scaleY(-1);
-}
 
 .sticker-4 {
     top: -7px;
@@ -239,12 +217,12 @@ html {
     animation-delay: 1s;
 }
 
-.sticker-2.animate, .sticker-5.animate, .sticker-8.animate, .sticker-11.animate {
+.sticker-5.animate, .sticker-8.animate, .sticker-11.animate {
     animation: pulse 3s ease-in-out infinite;
     animation-delay: 1.5s;
 }
 
-.sticker-3.animate, .sticker-6.animate, .sticker-9.animate, .sticker-12.animate {
+.sticker-6.animate, .sticker-9.animate, .sticker-12.animate {
     animation: wiggle 5s ease-in-out infinite;
     animation-delay: 2s;
 }
@@ -252,8 +230,6 @@ html {
 /* Responsive adjustments for stickers */
 @media (max-width: 768px) {
     .sticker-1 { left: 480px; width: 130px; height: 130px; }
-    .sticker-2 { left: 480px; width: 14px; height: 14px; }
-    .sticker-3 { left: 490px; width: 14px; height: 14px; }
     .sticker-4 { left: 350px; width: 110px; height: 110px; }
     .sticker-5 { left: 310px; width: 160px; height: 240px; }
     .sticker-6 { left: 100px; width: 120px; height: 120px; }
@@ -267,8 +243,6 @@ html {
 
 @media (max-width: 480px) {
     .sticker-1 { left: 350px; width: 95px; height: 95px; }
-    .sticker-2 { left: 350px; width: 12px; height: 12px; }
-    .sticker-3 { left: 360px; width: 12px; height: 12px; }
     .sticker-4 { left: 250px; width: 80px; height: 80px; }
     .sticker-5 { left: 230px; width: 120px; height: 180px; }
     .sticker-6 { left: 70px; width: 90px; height: 90px; }
