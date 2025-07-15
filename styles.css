@@ -106,20 +106,20 @@ html {
     transform: translateY(0);
 }
 
-/* Sticker Positioning (scaled to fit 878px width container) */
+/* Sticker Positioning (exact Figma composition scaled to 878px container) */
 .sticker-1 {
-    top: 8px;
-    left: 485px;
-    width: 140px;
-    height: 140px;
+    top: 17px;
+    left: 655px;
+    width: 190px;
+    height: 190px;
     --rotation: 11deg;
 }
 
 .sticker-2 {
-    top: 125px;
-    left: 480px;
-    width: 12px;
-    height: 12px;
+    top: 169px;
+    left: 650px;
+    width: 18px;
+    height: 18px;
     --rotation: 191deg;
 }
 
@@ -128,10 +128,10 @@ html {
 }
 
 .sticker-3 {
-    top: 21px;
-    left: 500px;
-    width: 12px;
-    height: 12px;
+    top: 28px;
+    left: 679px;
+    width: 18px;
+    height: 18px;
     --rotation: 191deg;
 }
 
@@ -140,74 +140,74 @@ html {
 }
 
 .sticker-4 {
-    top: -5px;
-    left: 360px;
-    width: 116px;
-    height: 116px;
+    top: -7px;
+    left: 486px;
+    width: 157px;
+    height: 157px;
     --rotation: 353deg;
 }
 
 .sticker-5 {
-    top: 118px;
-    left: 325px;
-    width: 255px;
-    height: 255px;
+    top: 159px;
+    left: 438px;
+    width: 231px;
+    height: 346px;
     --rotation: 353deg;
 }
 
 .sticker-6 {
-    top: 54px;
-    left: 103px;
-    width: 130px;
-    height: 130px;
+    top: 73px;
+    left: 139px;
+    width: 176px;
+    height: 176px;
     --rotation: 7deg;
 }
 
 .sticker-7 {
-    top: 95px;
-    left: 232px;
-    width: 121px;
-    height: 121px;
+    top: 128px;
+    left: 314px;
+    width: 164px;
+    height: 164px;
     --rotation: 11deg;
 }
 
 .sticker-8 {
-    top: 190px;
-    left: 56px;
-    width: 295px;
-    height: 197px;
+    top: 256px;
+    left: 75px;
+    width: 400px;
+    height: 267px;
     --rotation: 10deg;
 }
 
 .sticker-9 {
-    top: 132px;
+    top: 178px;
     left: -1px;
-    width: 119px;
-    height: 119px;
+    width: 161px;
+    height: 161px;
     --rotation: 351deg;
 }
 
 .sticker-10 {
     top: -2px;
-    left: 218px;
-    width: 102px;
-    height: 102px;
+    left: 295px;
+    width: 138px;
+    height: 138px;
     --rotation: 13deg;
 }
 
 .sticker-11 {
-    top: 144px;
-    left: 506px;
-    width: 120px;
-    height: 180px;
+    top: 194px;
+    left: 685px;
+    width: 163px;
+    height: 244px;
     --rotation: 0deg;
 }
 
 .sticker-12 {
-    top: -63px;
-    left: -69px;
-    width: 236px;
-    height: 236px;
+    top: -85px;
+    left: -94px;
+    width: 319px;
+    height: 319px;
     --rotation: 345deg;
 }
 
@@ -251,33 +251,33 @@ html {
 
 /* Responsive adjustments for stickers */
 @media (max-width: 768px) {
-    .sticker-1 { left: 340px; width: 100px; height: 100px; }
-    .sticker-2 { left: 340px; width: 10px; height: 10px; }
-    .sticker-3 { left: 355px; width: 10px; height: 10px; }
+    .sticker-1 { left: 480px; width: 130px; height: 130px; }
+    .sticker-2 { left: 480px; width: 14px; height: 14px; }
+    .sticker-3 { left: 490px; width: 14px; height: 14px; }
+    .sticker-4 { left: 350px; width: 110px; height: 110px; }
+    .sticker-5 { left: 310px; width: 160px; height: 240px; }
+    .sticker-6 { left: 100px; width: 120px; height: 120px; }
+    .sticker-7 { left: 220px; width: 115px; height: 115px; }
+    .sticker-8 { left: 55px; width: 280px; height: 190px; }
+    .sticker-9 { left: -1px; width: 115px; height: 115px; }
+    .sticker-10 { left: 210px; width: 100px; height: 100px; }
+    .sticker-11 { left: 490px; width: 115px; height: 170px; }
+    .sticker-12 { left: -70px; width: 225px; height: 225px; }
+}
+
+@media (max-width: 480px) {
+    .sticker-1 { left: 350px; width: 95px; height: 95px; }
+    .sticker-2 { left: 350px; width: 12px; height: 12px; }
+    .sticker-3 { left: 360px; width: 12px; height: 12px; }
     .sticker-4 { left: 250px; width: 80px; height: 80px; }
-    .sticker-5 { left: 220px; width: 180px; height: 180px; }
+    .sticker-5 { left: 230px; width: 120px; height: 180px; }
     .sticker-6 { left: 70px; width: 90px; height: 90px; }
     .sticker-7 { left: 160px; width: 85px; height: 85px; }
     .sticker-8 { left: 40px; width: 210px; height: 140px; }
     .sticker-9 { left: -1px; width: 85px; height: 85px; }
-    .sticker-10 { left: 155px; width: 75px; height: 75px; }
+    .sticker-10 { left: 150px; width: 75px; height: 75px; }
     .sticker-11 { left: 360px; width: 85px; height: 130px; }
     .sticker-12 { left: -50px; width: 170px; height: 170px; }
-}
-
-@media (max-width: 480px) {
-    .sticker-1 { left: 280px; width: 80px; height: 80px; }
-    .sticker-2 { left: 280px; width: 8px; height: 8px; }
-    .sticker-3 { left: 290px; width: 8px; height: 8px; }
-    .sticker-4 { left: 200px; width: 60px; height: 60px; }
-    .sticker-5 { left: 180px; width: 140px; height: 140px; }
-    .sticker-6 { left: 50px; width: 70px; height: 70px; }
-    .sticker-7 { left: 130px; width: 65px; height: 65px; }
-    .sticker-8 { left: 30px; width: 170px; height: 110px; }
-    .sticker-9 { left: -1px; width: 65px; height: 65px; }
-    .sticker-10 { left: 120px; width: 55px; height: 55px; }
-    .sticker-11 { left: 290px; width: 65px; height: 100px; }
-    .sticker-12 { left: -40px; width: 130px; height: 130px; }
 }
 
 /* See More Section */
