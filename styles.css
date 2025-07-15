@@ -38,7 +38,8 @@ html {
     height: 49px;
     width: 100%;
     position: relative;
-    margin: 0 -20px;
+    margin: 0 auto;
+    max-width: 878px;
 }
 
 .header-content {
@@ -238,14 +239,14 @@ html {
     .intro-video { height: 150px; }
     .introduction-card { height: 170px; }
     .intro-sticker-1 { width: 113px; height: 170px; }
-    .intro-sticker-2 { left: 130px; width: 194px; height: 160px; }
+    .intro-sticker-2 { left: 105px; width: 194px; height: 160px; }
 }
 
 @media (max-width: 480px) {
     .intro-video { height: 120px; }
     .introduction-card { height: 140px; }
     .intro-sticker-1 { width: 90px; height: 135px; }
-    .intro-sticker-2 { left: 105px; width: 155px; height: 128px; }
+    .intro-sticker-2 { left: 82px; width: 155px; height: 128px; }
 }
 
 /* Responsive adjustments for stickers */
@@ -546,7 +547,7 @@ html {
 
 .intro-sticker-2 {
     top: 0px;
-    left: 174px;
+    left: 140px;
     width: 258px;
     height: 214px;
     --rotation: 358.505deg;
