@@ -89,8 +89,8 @@ html {
 .sticker {
     position: absolute;
     opacity: 0;
-    transform: scale(0.8) rotate(0deg);
-    transition: all 0.3s ease;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
     z-index: 1;
 }
 
@@ -98,11 +98,12 @@ html {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    transform: rotate(var(--rotation, 0deg));
 }
 
 .sticker.animate {
     opacity: 1;
-    transform: scale(1) rotate(var(--rotation, 0deg));
+    transform: translateY(0);
 }
 
 /* Sticker Positioning (scaled to fit 878px width container) */
@@ -120,12 +121,10 @@ html {
     width: 12px;
     height: 12px;
     --rotation: 191deg;
-    transform: scale(0.8) rotate(0deg) scaleY(-1);
 }
 
-.sticker-2.animate {
-    opacity: 1;
-    transform: scale(1) rotate(var(--rotation, 0deg)) scaleY(-1);
+.sticker-2 img {
+    transform: rotate(var(--rotation, 0deg)) scaleY(-1);
 }
 
 .sticker-3 {
@@ -134,12 +133,10 @@ html {
     width: 12px;
     height: 12px;
     --rotation: 191deg;
-    transform: scale(0.8) rotate(0deg) scaleY(-1);
 }
 
-.sticker-3.animate {
-    opacity: 1;
-    transform: scale(1) rotate(var(--rotation, 0deg)) scaleY(-1);
+.sticker-3 img {
+    transform: rotate(var(--rotation, 0deg)) scaleY(-1);
 }
 
 .sticker-4 {
@@ -216,34 +213,24 @@ html {
 
 /* Hover effects for stickers */
 .sticker:hover {
-    transform: scale(1.05) rotate(var(--rotation, 0deg));
+    transform: scale(1.05) translateY(0);
     z-index: 10;
 }
 
 /* Subtle keyframe animations */
 @keyframes float {
-    0%, 100% { transform: translateY(0px) rotate(var(--rotation, 0deg)); }
-    50% { transform: translateY(-5px) rotate(var(--rotation, 0deg)); }
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
 }
 
 @keyframes pulse {
-    0%, 100% { transform: scale(1) rotate(var(--rotation, 0deg)); }
-    50% { transform: scale(1.02) rotate(var(--rotation, 0deg)); }
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
 }
 
 @keyframes wiggle {
-    0%, 100% { transform: rotate(calc(var(--rotation, 0deg) - 1deg)); }
-    50% { transform: rotate(calc(var(--rotation, 0deg) + 1deg)); }
-}
-
-@keyframes pulse-flipped {
-    0%, 100% { transform: scale(1) rotate(var(--rotation, 0deg)) scaleY(-1); }
-    50% { transform: scale(1.02) rotate(var(--rotation, 0deg)) scaleY(-1); }
-}
-
-@keyframes wiggle-flipped {
-    0%, 100% { transform: rotate(calc(var(--rotation, 0deg) - 1deg)) scaleY(-1); }
-    50% { transform: rotate(calc(var(--rotation, 0deg) + 1deg)) scaleY(-1); }
+    0%, 100% { transform: translateX(0px); }
+    50% { transform: translateX(2px); }
 }
 
 /* Apply different animations to different stickers */
@@ -252,22 +239,12 @@ html {
     animation-delay: 1s;
 }
 
-.sticker-2.animate {
-    animation: pulse-flipped 3s ease-in-out infinite;
-    animation-delay: 1.5s;
-}
-
-.sticker-3.animate {
-    animation: wiggle-flipped 5s ease-in-out infinite;
-    animation-delay: 2s;
-}
-
-.sticker-5.animate, .sticker-8.animate, .sticker-11.animate {
+.sticker-2.animate, .sticker-5.animate, .sticker-8.animate, .sticker-11.animate {
     animation: pulse 3s ease-in-out infinite;
     animation-delay: 1.5s;
 }
 
-.sticker-6.animate, .sticker-9.animate, .sticker-12.animate {
+.sticker-3.animate, .sticker-6.animate, .sticker-9.animate, .sticker-12.animate {
     animation: wiggle 5s ease-in-out infinite;
     animation-delay: 2s;
 }
