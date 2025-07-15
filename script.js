@@ -257,6 +257,38 @@ document.addEventListener('DOMContentLoaded', function() {
             }, index * 150);
         });
     }, 300);
+
+    // Sticker animations
+    function animateStickers() {
+        const stickers = document.querySelectorAll('.sticker');
+        
+        stickers.forEach(sticker => {
+            const delay = parseFloat(sticker.getAttribute('data-delay')) || 0;
+            
+            setTimeout(() => {
+                sticker.classList.add('animate');
+            }, delay * 1000);
+        });
+    }
+
+    // Start sticker animations when hero gallery is in view
+    const heroGallery = document.querySelector('.hero-gallery-content');
+    if (heroGallery) {
+        const heroObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        animateStickers();
+                    }, 800); // Delay after hero container appears
+                    heroObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.3 // Trigger when 30% of hero is visible
+        });
+        
+        heroObserver.observe(heroGallery);
+    }
     
     // Add click tracking for analytics (if needed)
     document.addEventListener('click', function(e) {

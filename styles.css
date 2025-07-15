@@ -75,7 +75,7 @@ html {
 .hero-gallery-content {
     width: 100%;
     height: 432px;
-    background-image: url('./assets/images/hero.png');
+    background-color: #fdfdfd;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -83,6 +83,224 @@ html {
     border: 1px solid #000;
     position: relative;
     overflow: hidden;
+}
+
+/* Individual Stickers */
+.sticker {
+    position: absolute;
+    opacity: 0;
+    transform: scale(0.8) rotate(0deg);
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.sticker img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.sticker.animate {
+    opacity: 1;
+    transform: scale(1) rotate(var(--rotation, 0deg));
+}
+
+/* Sticker Positioning (scaled to fit 878px width container) */
+.sticker-1 {
+    top: 8px;
+    left: 485px;
+    width: 140px;
+    height: 140px;
+    --rotation: 11deg;
+}
+
+.sticker-2 {
+    top: 125px;
+    left: 480px;
+    width: 12px;
+    height: 12px;
+    --rotation: 191deg;
+    transform: scale(0.8) rotate(0deg) scaleY(-1);
+}
+
+.sticker-2.animate {
+    opacity: 1;
+    transform: scale(1) rotate(var(--rotation, 0deg)) scaleY(-1);
+}
+
+.sticker-3 {
+    top: 21px;
+    left: 500px;
+    width: 12px;
+    height: 12px;
+    --rotation: 191deg;
+    transform: scale(0.8) rotate(0deg) scaleY(-1);
+}
+
+.sticker-3.animate {
+    opacity: 1;
+    transform: scale(1) rotate(var(--rotation, 0deg)) scaleY(-1);
+}
+
+.sticker-4 {
+    top: -5px;
+    left: 360px;
+    width: 116px;
+    height: 116px;
+    --rotation: 353deg;
+}
+
+.sticker-5 {
+    top: 118px;
+    left: 325px;
+    width: 255px;
+    height: 255px;
+    --rotation: 353deg;
+}
+
+.sticker-6 {
+    top: 54px;
+    left: 103px;
+    width: 130px;
+    height: 130px;
+    --rotation: 7deg;
+}
+
+.sticker-7 {
+    top: 95px;
+    left: 232px;
+    width: 121px;
+    height: 121px;
+    --rotation: 11deg;
+}
+
+.sticker-8 {
+    top: 190px;
+    left: 56px;
+    width: 295px;
+    height: 197px;
+    --rotation: 10deg;
+}
+
+.sticker-9 {
+    top: 132px;
+    left: -1px;
+    width: 119px;
+    height: 119px;
+    --rotation: 351deg;
+}
+
+.sticker-10 {
+    top: -2px;
+    left: 218px;
+    width: 102px;
+    height: 102px;
+    --rotation: 13deg;
+}
+
+.sticker-11 {
+    top: 144px;
+    left: 506px;
+    width: 120px;
+    height: 180px;
+    --rotation: 0deg;
+}
+
+.sticker-12 {
+    top: -63px;
+    left: -69px;
+    width: 236px;
+    height: 236px;
+    --rotation: 345deg;
+}
+
+/* Hover effects for stickers */
+.sticker:hover {
+    transform: scale(1.05) rotate(var(--rotation, 0deg));
+    z-index: 10;
+}
+
+/* Subtle keyframe animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(var(--rotation, 0deg)); }
+    50% { transform: translateY(-5px) rotate(var(--rotation, 0deg)); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1) rotate(var(--rotation, 0deg)); }
+    50% { transform: scale(1.02) rotate(var(--rotation, 0deg)); }
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: rotate(calc(var(--rotation, 0deg) - 1deg)); }
+    50% { transform: rotate(calc(var(--rotation, 0deg) + 1deg)); }
+}
+
+@keyframes pulse-flipped {
+    0%, 100% { transform: scale(1) rotate(var(--rotation, 0deg)) scaleY(-1); }
+    50% { transform: scale(1.02) rotate(var(--rotation, 0deg)) scaleY(-1); }
+}
+
+@keyframes wiggle-flipped {
+    0%, 100% { transform: rotate(calc(var(--rotation, 0deg) - 1deg)) scaleY(-1); }
+    50% { transform: rotate(calc(var(--rotation, 0deg) + 1deg)) scaleY(-1); }
+}
+
+/* Apply different animations to different stickers */
+.sticker-1.animate, .sticker-4.animate, .sticker-7.animate, .sticker-10.animate {
+    animation: float 4s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+.sticker-2.animate {
+    animation: pulse-flipped 3s ease-in-out infinite;
+    animation-delay: 1.5s;
+}
+
+.sticker-3.animate {
+    animation: wiggle-flipped 5s ease-in-out infinite;
+    animation-delay: 2s;
+}
+
+.sticker-5.animate, .sticker-8.animate, .sticker-11.animate {
+    animation: pulse 3s ease-in-out infinite;
+    animation-delay: 1.5s;
+}
+
+.sticker-6.animate, .sticker-9.animate, .sticker-12.animate {
+    animation: wiggle 5s ease-in-out infinite;
+    animation-delay: 2s;
+}
+
+/* Responsive adjustments for stickers */
+@media (max-width: 768px) {
+    .sticker-1 { left: 340px; width: 100px; height: 100px; }
+    .sticker-2 { left: 340px; width: 10px; height: 10px; }
+    .sticker-3 { left: 355px; width: 10px; height: 10px; }
+    .sticker-4 { left: 250px; width: 80px; height: 80px; }
+    .sticker-5 { left: 220px; width: 180px; height: 180px; }
+    .sticker-6 { left: 70px; width: 90px; height: 90px; }
+    .sticker-7 { left: 160px; width: 85px; height: 85px; }
+    .sticker-8 { left: 40px; width: 210px; height: 140px; }
+    .sticker-9 { left: -1px; width: 85px; height: 85px; }
+    .sticker-10 { left: 155px; width: 75px; height: 75px; }
+    .sticker-11 { left: 360px; width: 85px; height: 130px; }
+    .sticker-12 { left: -50px; width: 170px; height: 170px; }
+}
+
+@media (max-width: 480px) {
+    .sticker-1 { left: 280px; width: 80px; height: 80px; }
+    .sticker-2 { left: 280px; width: 8px; height: 8px; }
+    .sticker-3 { left: 290px; width: 8px; height: 8px; }
+    .sticker-4 { left: 200px; width: 60px; height: 60px; }
+    .sticker-5 { left: 180px; width: 140px; height: 140px; }
+    .sticker-6 { left: 50px; width: 70px; height: 70px; }
+    .sticker-7 { left: 130px; width: 65px; height: 65px; }
+    .sticker-8 { left: 30px; width: 170px; height: 110px; }
+    .sticker-9 { left: -1px; width: 65px; height: 65px; }
+    .sticker-10 { left: 120px; width: 55px; height: 55px; }
+    .sticker-11 { left: 290px; width: 65px; height: 100px; }
+    .sticker-12 { left: -40px; width: 130px; height: 130px; }
 }
 
 /* See More Section */
