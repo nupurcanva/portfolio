@@ -236,15 +236,15 @@ html {
 
 /* Responsive adjustments for intro stickers */
 @media (max-width: 768px) {
-    .intro-video { height: 200px; }
-    .introduction-card { height: 220px; }
+    .intro-video { height: 180px; }
+    .introduction-card { height: 200px; }
     .intro-sticker-1 { width: 113px; height: 170px; }
     .intro-sticker-2 { left: 105px; width: 194px; height: 160px; }
 }
 
 @media (max-width: 480px) {
-    .intro-video { height: 170px; }
-    .introduction-card { height: 190px; }
+    .intro-video { height: 150px; }
+    .introduction-card { height: 170px; }
     .intro-sticker-1 { width: 90px; height: 135px; }
     .intro-sticker-2 { left: 82px; width: 155px; height: 128px; }
 }
@@ -502,11 +502,11 @@ html {
 }
 
 .introduction-card {
-    height: 250px;
+    height: 230px;
 }
 
 .intro-video {
-    height: 230px;
+    height: 210px;
     background-color: #ffffff;
     border-radius: 24px;
     width: 100%;
@@ -596,12 +596,11 @@ html {
     padding: 0 17px;
     cursor: pointer;
     z-index: 2;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .intro-clickable-section:hover {
     background-color: #f9f9f9;
-    transform: translateY(-2px);
 }
 
 .intro-clickable-text {
