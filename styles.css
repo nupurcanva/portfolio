@@ -233,6 +233,17 @@ html {
     animation-delay: 2s;
 }
 
+/* Responsive adjustments for intro stickers */
+@media (max-width: 768px) {
+    .intro-sticker-1 { width: 70px; height: 105px; }
+    .intro-sticker-2 { left: 120px; width: 120px; height: 100px; }
+}
+
+@media (max-width: 480px) {
+    .intro-sticker-1 { width: 55px; height: 85px; }
+    .intro-sticker-2 { left: 90px; width: 90px; height: 75px; }
+}
+
 /* Responsive adjustments for stickers */
 @media (max-width: 768px) {
     .sticker-1 { left: 350px; width: 110px; height: 110px; }
@@ -491,19 +502,67 @@ html {
 
 .intro-video {
     height: 166px;
-    background-image: url('./assets/images/intro.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: #ffffff;
     border-radius: 24px;
     width: 100%;
     margin: 0;
+    position: relative;
+    overflow: hidden;
 }
 
-.intro-video img {
+/* Individual Intro Stickers */
+.intro-sticker {
+    position: absolute;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    z-index: 1;
+}
+
+.intro-sticker img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    transform: rotate(var(--rotation, 0deg));
+}
+
+.intro-sticker.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Intro Sticker Positioning (scaled to fit 427px × 166px container) */
+.intro-sticker-1 {
+    top: 0px;
+    left: -2px;
+    width: 96px;
+    height: 144px;
+    --rotation: 6.5deg;
+}
+
+.intro-sticker-2 {
+    top: 0px;
+    left: 174px;
+    width: 164px;
+    height: 136px;
+    --rotation: 358.5deg;
+}
+
+/* Intro sticker animations */
+.intro-sticker-1.animate {
+    animation: float 4s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+.intro-sticker-2.animate {
+    animation: pulse 3s ease-in-out infinite;
+    animation-delay: 1.5s;
+}
+
+/* Hover effects for intro stickers */
+.intro-sticker:hover {
+    transform: scale(1.05) translateY(0);
+    z-index: 10;
 }
 
 .contact-cards {

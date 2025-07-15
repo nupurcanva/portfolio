@@ -201,7 +201,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', handleResponsiveNav);
     
     // Add loading animation for images
-    const images = document.querySelectorAll('.hero-gallery-content, .intro-video img');
+    const images = document.querySelectorAll('.hero-gallery-content, .intro-video img, .intro-sticker img');
     images.forEach(img => {
         if (img.tagName === 'IMG') {
             img.addEventListener('load', function() {
@@ -288,6 +288,38 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         heroObserver.observe(heroGallery);
+    }
+
+    // Intro sticker animations
+    function animateIntroStickers() {
+        const introStickers = document.querySelectorAll('.intro-sticker');
+        
+        introStickers.forEach(sticker => {
+            const delay = parseFloat(sticker.getAttribute('data-delay')) || 0;
+            
+            setTimeout(() => {
+                sticker.classList.add('animate');
+            }, delay * 1000);
+        });
+    }
+
+    // Start intro sticker animations when intro section is in view
+    const introVideo = document.querySelector('.intro-video');
+    if (introVideo) {
+        const introObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        animateIntroStickers();
+                    }, 400); // Delay after intro container appears
+                    introObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.3 // Trigger when 30% of intro is visible
+        });
+        
+        introObserver.observe(introVideo);
     }
     
     // Add click tracking for analytics (if needed)
