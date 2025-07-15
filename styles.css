@@ -235,13 +235,17 @@ html {
 
 /* Responsive adjustments for intro stickers */
 @media (max-width: 768px) {
-    .intro-sticker-1 { width: 70px; height: 105px; }
-    .intro-sticker-2 { left: 120px; width: 120px; height: 100px; }
+    .intro-video { height: 180px; }
+    .introduction-card { height: 200px; }
+    .intro-sticker-1 { width: 113px; height: 170px; }
+    .intro-sticker-2 { left: 130px; width: 194px; height: 160px; }
 }
 
 @media (max-width: 480px) {
-    .intro-sticker-1 { width: 55px; height: 85px; }
-    .intro-sticker-2 { left: 90px; width: 90px; height: 75px; }
+    .intro-video { height: 150px; }
+    .introduction-card { height: 170px; }
+    .intro-sticker-1 { width: 90px; height: 135px; }
+    .intro-sticker-2 { left: 105px; width: 155px; height: 128px; }
 }
 
 /* Responsive adjustments for stickers */
@@ -497,11 +501,11 @@ html {
 }
 
 .introduction-card {
-    height: 200px;
+    height: 250px;
 }
 
 .intro-video {
-    height: 166px;
+    height: 230px;
     background-color: #ffffff;
     border-radius: 24px;
     width: 100%;
@@ -531,21 +535,21 @@ html {
     transform: translateY(0);
 }
 
-/* Intro Sticker Positioning (scaled to fit 427px × 166px container) */
+/* Intro Sticker Positioning (exact Figma composition) */
 .intro-sticker-1 {
     top: 0px;
     left: -2px;
-    width: 96px;
-    height: 144px;
-    --rotation: 6.5deg;
+    width: 151px;
+    height: 226px;
+    --rotation: 6.519deg;
 }
 
 .intro-sticker-2 {
     top: 0px;
     left: 174px;
-    width: 164px;
-    height: 136px;
-    --rotation: 358.5deg;
+    width: 258px;
+    height: 214px;
+    --rotation: 358.505deg;
 }
 
 /* Intro sticker animations */
