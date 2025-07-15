@@ -36,10 +36,10 @@ html {
     background-color: #f5f5f5;
     border-bottom: 1px solid #000;
     height: 49px;
-    width: 100%;
+    width: 100vw;
     position: relative;
-    margin: 0 auto;
-    max-width: 878px;
+    margin: 0;
+    margin-left: calc(-50vw + 50%);
 }
 
 .header-content {
