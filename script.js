@@ -165,17 +165,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const contactItems = document.querySelectorAll('.contact-item');
     contactItems.forEach(item => {
         item.addEventListener('click', function() {
-            const contactText = this.querySelector('.contact-text').textContent;
+            const contactType = this.getAttribute('data-contact');
+            const contactValue = this.getAttribute('data-value');
             
-            if (contactText.includes('@')) {
+            if (contactType === 'email') {
                 // Email
-                window.location.href = `mailto:${contactText}`;
-            } else if (contactText.includes('linkedin')) {
+                window.location.href = `mailto:${contactValue}`;
+            } else if (contactType === 'linkedin') {
                 // LinkedIn
-                window.open(`https://${contactText}`, '_blank');
-            } else if (contactText.includes('instagram')) {
+                window.open(`https://${contactValue}`, '_blank');
+            } else if (contactType === 'instagram') {
                 // Instagram
-                window.open(`https://${contactText}`, '_blank');
+                window.open(`https://${contactValue}`, '_blank');
             }
         });
     });
