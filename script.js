@@ -193,6 +193,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // Skill clickable section handlers
+    const skillClickableSections = document.querySelectorAll('.skill-clickable-section');
+    skillClickableSections.forEach(section => {
+        section.addEventListener('click', function() {
+            const page = this.getAttribute('data-page');
+            if (page) {
+                // Navigate to child page - you can customize this URL
+                window.open(`/${page}.html`, '_blank');
+            }
+        });
+    });
+    
     // Responsive navigation handling
     function handleResponsiveNav() {
         const nav = document.querySelector('.main-nav');
