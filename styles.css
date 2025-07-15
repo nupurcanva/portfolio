@@ -236,15 +236,15 @@ html {
 
 /* Responsive adjustments for intro stickers */
 @media (max-width: 768px) {
-    .intro-video { height: 150px; }
-    .introduction-card { height: 170px; }
+    .intro-video { height: 200px; }
+    .introduction-card { height: 220px; }
     .intro-sticker-1 { width: 113px; height: 170px; }
     .intro-sticker-2 { left: 105px; width: 194px; height: 160px; }
 }
 
 @media (max-width: 480px) {
-    .intro-video { height: 120px; }
-    .introduction-card { height: 140px; }
+    .intro-video { height: 170px; }
+    .introduction-card { height: 190px; }
     .intro-sticker-1 { width: 90px; height: 135px; }
     .intro-sticker-2 { left: 82px; width: 155px; height: 128px; }
 }
@@ -502,11 +502,11 @@ html {
 }
 
 .introduction-card {
-    height: 200px;
+    height: 250px;
 }
 
 .intro-video {
-    height: 180px;
+    height: 230px;
     background-color: #ffffff;
     border-radius: 24px;
     width: 100%;
@@ -568,6 +568,68 @@ html {
 .intro-sticker:hover {
     transform: scale(1.05) translateY(0);
     z-index: 10;
+}
+
+/* Intro separator line */
+.intro-separator {
+    position: absolute;
+    bottom: 56px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #000;
+    z-index: 2;
+}
+
+/* Intro clickable section */
+.intro-clickable-section {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 56px;
+    background-color: #ffffff;
+    border-radius: 0 0 24px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 17px;
+    cursor: pointer;
+    z-index: 2;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.intro-clickable-section:hover {
+    background-color: #f9f9f9;
+    transform: translateY(-2px);
+}
+
+.intro-clickable-text {
+    font-size: 13.6px;
+    color: #374151;
+    font-family: 'Figtree', sans-serif;
+    font-weight: 400;
+}
+
+.intro-arrow-icon {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.intro-arrow-icon img {
+    width: 16px;
+    height: 16px;
+    transform: rotate(-90deg);
+}
+
+.intro-clickable-section:hover .intro-arrow-icon {
+    transform: scale(1.1);
 }
 
 .contact-cards {

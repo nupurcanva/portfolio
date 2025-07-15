@@ -181,6 +181,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // Intro clickable section handler
+    const introClickableSection = document.querySelector('.intro-clickable-section');
+    if (introClickableSection) {
+        introClickableSection.addEventListener('click', function() {
+            const page = this.getAttribute('data-page');
+            if (page) {
+                // Navigate to child page - you can customize this URL
+                window.open(`/${page}.html`, '_blank');
+            }
+        });
+    }
+    
     // Responsive navigation handling
     function handleResponsiveNav() {
         const nav = document.querySelector('.main-nav');
