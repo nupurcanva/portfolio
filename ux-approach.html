@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How I approach UX Design - Nupur Aggarwal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="header-title">Nupur Aggarwal</h1>
+                <p class="header-subtitle">How I approach UX Design</p>
+            </div>
+        </header>
+
+        <!-- Navigation Section -->
+        <div class="project-navigation">
+            <div class="project-navigation-content">
+                <!-- Back Button -->
+                <button class="nav-button back-button" onclick="window.location.href='index.html'">
+                    <img src="assets/images/icon-arrow-down.svg" alt="Back" class="nav-icon back-icon">
+                    <span>Back to Home</span>
+                </button>
+                
+                <!-- Project Navigation -->
+                <div class="project-nav-controls">
+                    <button class="nav-button prev-button" onclick="navigateToProject('previous')">
+                        <img src="assets/images/icon-chevron-down.svg" alt="Previous" class="nav-icon prev-icon">
+                        <span>Previous Project</span>
+                    </button>
+                    <button class="nav-button next-button" onclick="navigateToProject('next')">
+                        <span>Next Project</span>
+                        <img src="assets/images/icon-chevron-down.svg" alt="Next" class="nav-icon next-icon">
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Divider -->
+        <div class="section-divider"></div>
+
+        <!-- Project Content Section -->
+        <section class="project-page">
+            <div class="project-page-content">
+                <div class="project-intro">
+                    <h1 class="project-title">How I approach UX Design</h1>
+                    <p class="project-subtitle">My philosophy and methods for creating thoughtful, effective user experiences</p>
+                </div>
+
+                <!-- Content Sections -->
+                <div class="project-content-sections">
+                    
+                    <!-- About Me -->
+                    <div class="content-section">
+                        <h2>👋 About Me</h2>
+                        <p>I'm a product designer who loves digging into messy, complex systems and finding clarity.</p>
+                        <p>Whether it's shaping the app ecosystem at Canva, streamlining DevOps flows at Atlassian, or working on platform design at Microsoft, I design experiences that feel thoughtful, useful, and grounded in the real world.</p>
+                        
+                        <div class="highlight-box">
+                            <p><strong>🎯 I focus most on vision-level work:</strong> where we're going, why it matters, and how the small details ladder up to a bigger story.</p>
+                        </div>
+                        
+                        <!-- About me illustration -->
+                        <div class="section-image">
+                            <img src="assets/images/about me.png" alt="About me - showing my approach to UX design and vision-level work" class="content-image" style="border: 2px solid #e1e5e9; border-radius: 12px;">
+                        </div>
+                        
+
+                    </div>
+
+                    <!-- Ecosystems -->
+                    <div class="content-section">
+                        <h2>🌐 I design for ecosystems, not just features</h2>
+                        <p>At Canva, I work on experiences that connect third-party apps, integrations, and internal tooling.</p>
+                        <p>It's a lot of invisible UX, but that's what I enjoy—designing systems that work well for both builders and users.</p>
+                        
+                        <h3>What I keep in mind:</h3>
+                        <ul>
+                            <li>Who are all the players, and how do they connect?</li>
+                            <li>How can I make things extensible but still feel native?</li>
+                            <li>What patterns will scale across the platform?</li>
+                        </ul>
+                        
+                        <div class="highlight-box">
+                            <p><strong>🎮 Core focus:</strong> I'm especially interested in designing the "rules of the game"—the structures that help other builders thrive.</p>
+                        </div>
+                    </div>
+
+                    <!-- Questions -->
+                    <div class="content-section">
+                        <h2>I ask a lot of questions (the good kind)</h2>
+                        <p>My design process isn't about jumping into Figma. It starts with getting aligned—on the problem, the people, and what success even looks like.</p>
+                        
+                        <h3>How I bring structure to ambiguity:</h3>
+                        <ul>
+                            <li>Vision workshops and mapping sessions</li>
+                            <li>Synthesising research into design principles</li>
+                            <li>Communicating trade-offs, not just solutions</li>
+                        </ul>
+                    </div>
+
+                    <!-- Mobile -->
+                    <div class="content-section">
+                        <h2>I care about mobile beyond "does it resize?"</h2>
+                        <p>Mobile UX is more than making it fit—it's about intent, attention, and touch.</p>
+                        <p>I've worked on mobile-first experiences at Canva, especially around app discovery and usage.</p>
+                        
+                        <h3>Things I keep top of mind:</h3>
+                        <ul>
+                            <li>Can someone understand this in 3 seconds?</li>
+                            <li>Is it obvious what to do next?</li>
+                            <li>How does this feel in someone's hand?</li>
+                        </ul>
+                        
+                        <div class="highlight-box">
+                            <p><strong>I believe mobile-first thinking makes every experience sharper—even on desktop.</strong></p>
+                        </div>
+                    </div>
+
+                    <!-- Strategy & Detail -->
+                    <div class="content-section">
+                        <h2>🧠 I flex between strategy and detail</h2>
+                        <p>Some days I'm sketching service blueprints, other days I'm deep in microcopy or prototyping edge cases.</p>
+                        <p>I move between zoomed-out thinking and zoomed-in craft, depending on what the team needs.</p>
+                        
+                        <h3>I've worked on:</h3>
+                        <ul>
+                            <li>Early vision work (like Bitbucket Pipelines)</li>
+                            <li>Pattern design for scale (like Smart DevOps setup flows)</li>
+                            <li>Cross-functional problem solving across PMs and engineers</li>
+                        </ul>
+                        
+                        <div class="highlight-box">
+                            <p><strong>🌲 Sweet spot:</strong> I'm happiest when I'm helping teams see the forest and the trees.</p>
+                        </div>
+                    </div>
+
+                    <!-- Transparency -->
+                    <div class="content-section">
+                        <h2>I like sharing the why, not just the what</h2>
+                        <p>A polished screen is great—but I care more about showing how I got there.</p>
+                        <p>I try to make my thinking transparent so it's easier to collaborate and build trust.</p>
+                        
+                        <h3>How I do this:</h3>
+                        <ul>
+                            <li>I annotate flows, not just present them</li>
+                            <li>I use 1-pagers to bring folks into the process</li>
+                            <li>I write to reflect, not just to document</li>
+                        </ul>
+                        
+                        <div class="highlight-box">
+                            <p><strong>I'm a big believer that clarity and storytelling are core design skills—not just nice add-ons.</strong></p>
+                        </div>
+                    </div>
+
+                    <!-- Collaboration -->
+                    <div class="content-section">
+                        <h2>I believe in good vibes and clear comms</h2>
+                        <p>UX is collaborative. I work closely with triads, engineers, and other designers—and I'm big on giving credit, asking thoughtful questions, and keeping momentum without burning people out.</p>
+                        
+                        <h3>What collaboration looks like for me:</h3>
+                        <ul>
+                            <li>Clarity > cleverness</li>
+                            <li>Feedback early and often</li>
+                            <li>Helping unblock others when I can</li>
+                            <li>Keeping conversations human, even in complex spaces</li>
+                        </ul>
+                    </div>
+
+                    <!-- Summary -->
+                    <div class="content-section">
+                        <h2>✨ In summary</h2>
+                        <p>I care about designing things that work in the real world—especially when they're complex.</p>
+                        
+                        <div class="highlight-box">
+                            <p><strong>💡 My approach:</strong> I like making sense of big systems, aligning people, and creating experiences that feel calm, considered, and easy to grow from.</p>
+                        </div>
+                        
+                        <p><strong>If that's your vibe too, we'll probably get along.</strong></p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Project navigation function
+        function navigateToProject(direction) {
+            // Define project pages in order
+            const projects = [
+                'smart-devops-experiences-jira.html',
+                'integrations-chatgpt-claude.html',
+                'ux-approach.html',
+                // Add more project pages here as they are created
+            ];
+            
+            const currentProject = 'ux-approach.html';
+            const currentIndex = projects.indexOf(currentProject);
+            
+            if (direction === 'previous' && currentIndex > 0) {
+                window.location.href = projects[currentIndex - 1];
+            } else if (direction === 'next' && currentIndex < projects.length - 1) {
+                window.location.href = projects[currentIndex + 1];
+            } else {
+                // If no previous/next project, return to homepage
+                window.location.href = 'index.html';
+            }
+        }
+    </script>
+</body>
+</html> 
