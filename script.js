@@ -183,17 +183,17 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Intro clickable section is handled by inline onclick handler in HTML
     
-    // Skill clickable section handlers (disabled - pages don't exist yet)
-    // const skillClickableSections = document.querySelectorAll('.skill-clickable-section');
-    // skillClickableSections.forEach(section => {
-    //     section.addEventListener('click', function() {
-    //         const page = this.getAttribute('data-page');
-    //         if (page) {
-    //             // Navigate to child page - you can customize this URL
-    //             window.location.href = `${page}.html`;
-    //         }
-    //     });
-    // });
+    // Skill clickable section handlers - Navigate to skills page with specific sections
+    const skillClickableSections = document.querySelectorAll('.skill-clickable-section');
+    skillClickableSections.forEach(section => {
+        section.addEventListener('click', function() {
+            const skillSection = this.getAttribute('data-page');
+            if (skillSection) {
+                // Navigate to skills page with section anchor
+                window.location.href = `skills.html#${skillSection}`;
+            }
+        });
+    });
     
     // Project clickable sections are handled by inline onclick handlers in HTML
     

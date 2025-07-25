@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills & Expertise - Nupur Aggarwal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="header-title">Nupur Aggarwal</h1>
+                <p class="header-subtitle">Skills & Expertise</p>
+            </div>
+        </header>
+
+        <!-- Navigation Section -->
+        <div class="project-navigation">
+            <div class="project-navigation-content">
+                <!-- Back Button -->
+                <button class="nav-button back-button" onclick="window.location.href='index.html'">
+                    <img src="assets/images/icon-arrow-down.svg" alt="Back" class="nav-icon back-icon">
+                    <span>Back to Home</span>
+                </button>
+                
+                <!-- Project Navigation -->
+                <div class="project-nav-controls">
+                    <button class="nav-button prev-button" onclick="navigateToProject('previous')">
+                        <img src="assets/images/icon-chevron-down.svg" alt="Previous" class="nav-icon prev-icon">
+                        <span>Previous Project</span>
+                    </button>
+                    <button class="nav-button next-button" onclick="navigateToProject('next')">
+                        <span>Next Project</span>
+                        <img src="assets/images/icon-chevron-down.svg" alt="Next" class="nav-icon next-icon">
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Divider -->
+        <div class="section-divider"></div>
+
+        <!-- Skills Navigation -->
+        <nav class="section-nav skills-nav" id="skills-nav">
+            <div class="nav-tabs">
+                <button class="nav-tab active" data-section="user-experience">User Experience</button>
+                <button class="nav-tab" data-section="experience-strategy">Experience Strategy</button>
+                <button class="nav-tab" data-section="user-research">User Research</button>
+            </div>
+            <div class="nav-icons">
+                <div class="nav-icon active">
+                    <img src="./assets/images/icon-user.svg" alt="UX icon">
+                </div>
+                <div class="nav-icon">
+                    <img src="./assets/images/icon-briefcase.svg" alt="Strategy icon">
+                </div>
+                <div class="nav-icon">
+                    <img src="./assets/images/icon-pencil-autofill.svg" alt="Research icon">
+                </div>
+            </div>
+        </nav>
+
+        <!-- Project Content Section -->
+        <section class="project-page">
+            <div class="project-page-content">
+                <div class="project-intro">
+                    <h1 class="project-title">Skills & Expertise</h1>
+                    <p class="project-subtitle">My core competencies and approach to design excellence</p>
+                </div>
+
+                <!-- Content Sections -->
+                <div class="project-content-sections">
+                    
+                    <!-- User Experience Design Section -->
+                    <section id="user-experience" class="content-section skill-section">
+                        <div class="section-header">
+                            <h2>User Experience Design</h2>
+                            <div class="section-icon">
+                                <img src="./assets/images/icon-arrow-down.svg" alt="Frame icon">
+                            </div>
+                        </div>
+                        <div class="skill-content">
+                            <p>My approach to UX design centers on creating intuitive, accessible experiences that solve real user problems. Recently, I redesigned the onboarding flow for a B2B SaaS platform, reducing user drop-off by 35% and increasing feature adoption by 50%. The project involved reimagining the information architecture, streamlining the interface design, and implementing progressive disclosure principles to guide users through complex workflows without overwhelming them.</p>
+                            
+                            <p>Another significant win was leading the mobile-first redesign of an e-commerce checkout process. Through iterative prototyping and usability testing, we identified friction points that were causing cart abandonment. The new design introduced contextual help, simplified form fields, and improved visual hierarchy, resulting in a 28% increase in conversion rates and significantly improved user satisfaction scores.</p>
+                            
+                            <p>I also spearheaded the creation of a comprehensive design system for a healthcare application, establishing consistent UI patterns, accessibility standards, and interaction guidelines. This system not only improved design consistency across 12 different product modules but also reduced development time by 40% and ensured WCAG 2.1 AA compliance throughout the platform.</p>
+                        </div>
+                    </section>
+
+                    <!-- Section Divider -->
+                    <div class="section-divider"></div>
+
+                    <!-- Experience Strategy Section -->
+                    <section id="experience-strategy" class="content-section skill-section">
+                        <div class="section-header">
+                            <h2>Experience Strategy</h2>
+                            <div class="section-icon">
+                                <img src="./assets/images/icon-arrow-down.svg" alt="Frame icon">
+                            </div>
+                        </div>
+                        <div class="skill-content">
+                            <p>My experience strategy work focuses on aligning business objectives with user needs to create cohesive, end-to-end experiences. A standout project involved developing a comprehensive digital transformation strategy for a traditional retail client looking to expand their online presence. I conducted stakeholder workshops, competitive analysis, and customer journey mapping to identify opportunities across all touchpoints.</p>
+                            
+                            <p>The strategy I developed included a phased approach to digital integration, prioritizing high-impact, low-effort initiatives while building toward long-term experience goals. We implemented personalized product recommendations, streamlined inventory management integration, and created omnichannel customer service touchpoints. This strategic approach resulted in a 45% increase in online revenue and improved customer lifetime value by 22%.</p>
+                            
+                            <p>Additionally, I led the experience strategy for launching a new fintech product targeting Gen Z users. By mapping generational preferences, technology adoption patterns, and financial behavior trends, I crafted a go-to-market experience strategy that differentiated the product in a crowded marketplace. The strategy encompassed brand positioning, user acquisition funnels, and retention mechanisms, contributing to exceeding user acquisition targets by 60% in the first quarter post-launch.</p>
+                        </div>
+                    </section>
+
+                    <!-- Section Divider -->
+                    <div class="section-divider"></div>
+
+                    <!-- User Research Section -->
+                    <section id="user-research" class="content-section skill-section">
+                        <div class="section-header">
+                            <h2>User Research</h2>
+                            <div class="section-icon">
+                                <img src="./assets/images/icon-arrow-down.svg" alt="Frame icon">
+                            </div>
+                        </div>
+                        <div class="skill-content">
+                            <p>My research practice combines qualitative insights with quantitative validation to inform design decisions with confidence. Recently, I conducted a comprehensive research initiative for a productivity app experiencing declining engagement. Through mixed-methods research including user interviews, behavioral analytics, and survey data, I uncovered that users were struggling with feature discoverability rather than feature utility.</p>
+                            
+                            <p>The research revealed three distinct user personas with different workflow preferences, leading to the development of customizable interface options that increased daily active users by 38%. I presented findings through compelling data stories that influenced product roadmap prioritization and secured additional development resources for user-centric improvements.</p>
+                            
+                            <p>Another impactful research project involved studying remote work collaboration patterns for a communication platform. I designed and executed a longitudinal study tracking team behaviors across different organization sizes and industries. The insights from this research informed the development of new features including asynchronous communication tools and context-aware notifications, which improved user productivity metrics by 42% and reduced communication overload complaints by 55%.</p>
+                            
+                            <p>I also pioneered the implementation of continuous user feedback loops for a subscription-based learning platform. By establishing automated feedback collection points, regular user interviews, and behavior tracking systems, I created a research infrastructure that provides ongoing insights into user needs and preferences. This approach has enabled the product team to make data-driven decisions more rapidly and has contributed to a 30% improvement in user retention rates.</p>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Project navigation function
+        function navigateToProject(direction) {
+            // Define project pages in order
+            const projects = [
+                'smart-devops-experiences-jira.html',
+                'integrations-chatgpt-claude.html',
+                'ux-approach.html',
+                'skills.html',
+                // Add more project pages here as they are created
+            ];
+            
+            const currentProject = 'skills.html';
+            const currentIndex = projects.indexOf(currentProject);
+            
+            if (direction === 'previous' && currentIndex > 0) {
+                window.location.href = projects[currentIndex - 1];
+            } else if (direction === 'next' && currentIndex < projects.length - 1) {
+                window.location.href = projects[currentIndex + 1];
+            } else {
+                // If no previous/next project, return to homepage
+                window.location.href = 'index.html';
+            }
+        }
+
+        // Skills navigation functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get navigation elements
+            const navTabs = document.querySelectorAll('.skills-nav .nav-tab');
+            const navIcons = document.querySelectorAll('.skills-nav .nav-icon');
+            const sections = document.querySelectorAll('.skill-section');
+            
+            // Function to get the currently active section based on scroll position
+            function getCurrentSection() {
+                const scrollPosition = window.scrollY + 200; // Add offset for better detection
+                
+                for (let i = sections.length - 1; i >= 0; i--) {
+                    const section = sections[i];
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        return section.id;
+                    }
+                }
+                
+                // Default to first section if no match
+                return 'user-experience';
+            }
+            
+            // Function to update active states in the navigation bar
+            function updateActiveStates(activeSection) {
+                // Update navigation tabs
+                navTabs.forEach(tab => {
+                    tab.classList.remove('active');
+                    if (tab.getAttribute('data-section') === activeSection) {
+                        tab.classList.add('active');
+                    }
+                });
+                
+                // Update navigation icons
+                navIcons.forEach((icon, index) => {
+                    icon.classList.remove('active');
+                    const sectionOrder = ['user-experience', 'experience-strategy', 'user-research'];
+                    if (sectionOrder[index] === activeSection) {
+                        icon.classList.add('active');
+                    }
+                });
+            }
+            
+            // Function to scroll to a specific section
+            function scrollToSection(sectionName) {
+                const section = document.getElementById(sectionName);
+                
+                if (section) {
+                    // Calculate offset to account for sticky navigation
+                    const navHeight = document.querySelector('.skills-nav') ? document.querySelector('.skills-nav').offsetHeight : 67;
+                    const sectionTop = section.offsetTop - navHeight - 20; // 20px buffer
+                    
+                    window.scrollTo({
+                        top: sectionTop,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+            
+            // Add click event listeners to navigation tabs
+            navTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const sectionName = this.getAttribute('data-section');
+                    scrollToSection(sectionName);
+                });
+            });
+            
+            // Add click event listeners to navigation icons
+            navIcons.forEach((icon, index) => {
+                icon.addEventListener('click', function() {
+                    const sectionOrder = ['user-experience', 'experience-strategy', 'user-research'];
+                    const sectionName = sectionOrder[index];
+                    scrollToSection(sectionName);
+                });
+            });
+            
+            // Scroll event listener to update active states
+            let isScrolling = false;
+            
+            function handleScroll() {
+                if (!isScrolling) {
+                    window.requestAnimationFrame(function() {
+                        const currentSection = getCurrentSection();
+                        updateActiveStates(currentSection);
+                        isScrolling = false;
+                    });
+                    isScrolling = true;
+                }
+            }
+            
+            window.addEventListener('scroll', handleScroll);
+            
+            // Handle direct navigation from URL hash
+            if (window.location.hash) {
+                const targetSection = window.location.hash.substring(1);
+                setTimeout(() => {
+                    scrollToSection(targetSection);
+                    updateActiveStates(targetSection);
+                }, 100);
+            }
+        });
+    </script>
+</body>
+</html> 
