@@ -173,49 +173,29 @@ document.addEventListener('DOMContentLoaded', function() {
                 window.location.href = `mailto:${contactValue}`;
             } else if (contactType === 'linkedin') {
                 // LinkedIn
-                window.open(`https://${contactValue}`, '_blank');
+                window.location.href = `https://${contactValue}`;
             } else if (contactType === 'instagram') {
                 // Instagram
-                window.open(`https://${contactValue}`, '_blank');
+                window.location.href = `https://${contactValue}`;
             }
         });
     });
     
-    // Intro clickable section handler
-    const introClickableSection = document.querySelector('.intro-clickable-section');
-    if (introClickableSection) {
-        introClickableSection.addEventListener('click', function() {
-            const page = this.getAttribute('data-page');
-            if (page) {
-                // Navigate to child page - you can customize this URL
-                window.open(`/${page}.html`, '_blank');
-            }
-        });
-    }
+    // Intro clickable section is handled by inline onclick handler in HTML
     
-    // Skill clickable section handlers
-    const skillClickableSections = document.querySelectorAll('.skill-clickable-section');
-    skillClickableSections.forEach(section => {
-        section.addEventListener('click', function() {
-            const page = this.getAttribute('data-page');
-            if (page) {
-                // Navigate to child page - you can customize this URL
-                window.open(`/${page}.html`, '_blank');
-            }
-        });
-    });
+    // Skill clickable section handlers (disabled - pages don't exist yet)
+    // const skillClickableSections = document.querySelectorAll('.skill-clickable-section');
+    // skillClickableSections.forEach(section => {
+    //     section.addEventListener('click', function() {
+    //         const page = this.getAttribute('data-page');
+    //         if (page) {
+    //             // Navigate to child page - you can customize this URL
+    //             window.location.href = `${page}.html`;
+    //         }
+    //     });
+    // });
     
-    // Project clickable section handlers
-    const projectClickableSections = document.querySelectorAll('.project-clickable-section');
-    projectClickableSections.forEach(section => {
-        section.addEventListener('click', function() {
-            const project = this.getAttribute('data-project');
-            if (project) {
-                // Navigate to project page - you can customize this URL
-                window.open(`/${project}.html`, '_blank');
-            }
-        });
-    });
+    // Project clickable sections are handled by inline onclick handlers in HTML
     
     // Responsive navigation handling
     function handleResponsiveNav() {
