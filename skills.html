@@ -49,17 +49,6 @@
                 <button class="nav-tab" data-section="experience-strategy">Experience Strategy</button>
                 <button class="nav-tab" data-section="user-research">User Research</button>
             </div>
-            <div class="nav-icons">
-                <div class="nav-icon active">
-                    <img src="./assets/images/icon-user.svg" alt="UX icon">
-                </div>
-                <div class="nav-icon">
-                    <img src="./assets/images/icon-briefcase.svg" alt="Strategy icon">
-                </div>
-                <div class="nav-icon">
-                    <img src="./assets/images/icon-pencil-autofill.svg" alt="Research icon">
-                </div>
-            </div>
         </nav>
 
         <!-- Project Content Section -->
@@ -181,109 +170,90 @@
             }
         }
 
-        // Skills navigation functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            // Get navigation elements
-            const navTabs = document.querySelectorAll('.skills-nav .nav-tab');
-            const navIcons = document.querySelectorAll('.skills-nav .nav-icon');
-            const sections = document.querySelectorAll('.skill-section');
-            
-            // Function to get the currently active section based on scroll position
-            function getCurrentSection() {
-                const scrollPosition = window.scrollY + 200; // Add offset for better detection
-                
-                for (let i = sections.length - 1; i >= 0; i--) {
-                    const section = sections[i];
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.offsetHeight;
-                    
-                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                        return section.id;
-                    }
-                }
-                
-                // Default to first section if no match
-                return 'user-experience';
-            }
-            
-            // Function to update active states in the navigation bar
-            function updateActiveStates(activeSection) {
-                // Update navigation tabs
-                navTabs.forEach(tab => {
-                    tab.classList.remove('active');
-                    if (tab.getAttribute('data-section') === activeSection) {
-                        tab.classList.add('active');
-                    }
-                });
-                
-                // Update navigation icons
-                navIcons.forEach((icon, index) => {
-                    icon.classList.remove('active');
-                    const sectionOrder = ['user-experience', 'experience-strategy', 'user-research'];
-                    if (sectionOrder[index] === activeSection) {
-                        icon.classList.add('active');
-                    }
-                });
-            }
-            
-            // Function to scroll to a specific section
-            function scrollToSection(sectionName) {
-                const section = document.getElementById(sectionName);
-                
-                if (section) {
-                    // Calculate offset to account for sticky navigation
-                    const navHeight = document.querySelector('.skills-nav') ? document.querySelector('.skills-nav').offsetHeight : 67;
-                    const sectionTop = section.offsetTop - navHeight - 20; // 20px buffer
-                    
-                    window.scrollTo({
-                        top: sectionTop,
-                        behavior: 'smooth'
-                    });
-                }
-            }
-            
-            // Add click event listeners to navigation tabs
-            navTabs.forEach(tab => {
-                tab.addEventListener('click', function() {
-                    const sectionName = this.getAttribute('data-section');
-                    scrollToSection(sectionName);
-                });
-            });
-            
-            // Add click event listeners to navigation icons
-            navIcons.forEach((icon, index) => {
-                icon.addEventListener('click', function() {
-                    const sectionOrder = ['user-experience', 'experience-strategy', 'user-research'];
-                    const sectionName = sectionOrder[index];
-                    scrollToSection(sectionName);
-                });
-            });
-            
-            // Scroll event listener to update active states
-            let isScrolling = false;
-            
-            function handleScroll() {
-                if (!isScrolling) {
-                    window.requestAnimationFrame(function() {
-                        const currentSection = getCurrentSection();
-                        updateActiveStates(currentSection);
-                        isScrolling = false;
-                    });
-                    isScrolling = true;
-                }
-            }
-            
-            window.addEventListener('scroll', handleScroll);
-            
-            // Handle direct navigation from URL hash
-            if (window.location.hash) {
-                const targetSection = window.location.hash.substring(1);
-                setTimeout(() => {
-                    scrollToSection(targetSection);
-                    updateActiveStates(targetSection);
-                }, 100);
-            }
-        });
+                 // Skills navigation functionality
+         document.addEventListener('DOMContentLoaded', function() {
+             // Get navigation elements
+             const navTabs = document.querySelectorAll('.skills-nav .nav-tab');
+             const sections = document.querySelectorAll('.skill-section');
+             
+             // Function to get the currently active section based on scroll position
+             function getCurrentSection() {
+                 const scrollPosition = window.scrollY + 200; // Add offset for better detection
+                 
+                 for (let i = sections.length - 1; i >= 0; i--) {
+                     const section = sections[i];
+                     const sectionTop = section.offsetTop;
+                     const sectionHeight = section.offsetHeight;
+                     
+                     if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                         return section.id;
+                     }
+                 }
+                 
+                 // Default to first section if no match
+                 return 'user-experience';
+             }
+             
+             // Function to update active states in the navigation bar
+             function updateActiveStates(activeSection) {
+                 // Update navigation tabs
+                 navTabs.forEach(tab => {
+                     tab.classList.remove('active');
+                     if (tab.getAttribute('data-section') === activeSection) {
+                         tab.classList.add('active');
+                     }
+                 });
+             }
+             
+             // Function to scroll to a specific section
+             function scrollToSection(sectionName) {
+                 const section = document.getElementById(sectionName);
+                 
+                 if (section) {
+                     // Calculate offset to account for sticky navigation
+                     const navHeight = document.querySelector('.skills-nav') ? document.querySelector('.skills-nav').offsetHeight : 67;
+                     const sectionTop = section.offsetTop - navHeight - 20; // 20px buffer
+                     
+                     window.scrollTo({
+                         top: sectionTop,
+                         behavior: 'smooth'
+                     });
+                 }
+             }
+             
+             // Add click event listeners to navigation tabs
+             navTabs.forEach(tab => {
+                 tab.addEventListener('click', function() {
+                     const sectionName = this.getAttribute('data-section');
+                     scrollToSection(sectionName);
+                 });
+             });
+             
+             // Scroll event listener to update active states
+             let isScrolling = false;
+             
+             function handleScroll() {
+                 if (!isScrolling) {
+                     window.requestAnimationFrame(function() {
+                         const currentSection = getCurrentSection();
+                         updateActiveStates(currentSection);
+                         isScrolling = false;
+                     });
+                     isScrolling = true;
+                 }
+             }
+             
+             window.addEventListener('scroll', handleScroll);
+             
+             // Handle direct navigation from URL hash
+             if (window.location.hash) {
+                 const targetSection = window.location.hash.substring(1);
+                 setTimeout(() => {
+                     scrollToSection(targetSection);
+                     updateActiveStates(targetSection);
+                 }, 100);
+             }
+         });
     </script>
 </body>
 </html> 
