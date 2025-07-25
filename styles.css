@@ -2328,18 +2328,19 @@ mark {
 }
 
 .skill-section .section-icon {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #000;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #fff;
 }
 
 .skill-section .section-icon img {
-    width: 16px;
-    height: 16px;
-    transform: rotate(90deg);
-    opacity: 0.6;
+    width: 18px;
+    height: 18px;
 }
 
 .skill-content {
