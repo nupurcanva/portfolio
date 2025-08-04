@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
     updateActiveStates(initialSection);
     
     // Add hover effects to interactive elements
-    const interactiveElements = document.querySelectorAll('.nav-tab, .nav-icon, .see-more-icon, .card-icon, .column-icon, .work-icon');
+    const interactiveElements = document.querySelectorAll('.nav-tab, .nav-icon, .see-more-icon, .back-to-top-icon, .card-icon, .column-icon, .work-icon');
     interactiveElements.forEach(element => {
         element.addEventListener('mouseenter', function() {
             this.style.opacity = '0.8';
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Add focus styles for accessibility
-    const focusableElements = document.querySelectorAll('.nav-tab, .nav-icon, .see-more-icon, .card-icon, .column-icon, .work-icon');
+    const focusableElements = document.querySelectorAll('.nav-tab, .nav-icon, .see-more-icon, .back-to-top-icon, .card-icon, .column-icon, .work-icon');
     focusableElements.forEach(element => {
         element.setAttribute('tabindex', '0');
         
@@ -196,6 +196,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Project clickable sections are handled by inline onclick handlers in HTML
+    
+    // Back to Top functionality
+    const backToTopIcon = document.querySelector('.back-to-top-icon');
+    if (backToTopIcon) {
+        backToTopIcon.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
     
     // Responsive navigation handling
     function handleResponsiveNav() {
