@@ -1,0 +1,25 @@
+﻿Item,Github,Gitlab,Codefresh
+Location,"Location: Repository > Settings > Action > Self-hosted runners
+eg: https://github.com/justinskariah/bengbeng/settings/actions","Location: Repository > Setings > CI/CD > Runners
+eg: https://gitlab.com/justinskariah/shipit/-/settings/ci_cd","Location: Accounts Settings > Agents
+eg: https://g.codefresh.io/account-admin/agents
+doc: https://codefresh.io/docs/docs/administration/codefresh-runner/"
+Pros,"✅ Github has account level and repo support for runners
+✅ Well structured instructions page
+✅ The github token changes each time the page refreshes 
+✅ Each runner comes with some default labels that user cannot change, but add more labels 
+✅ It will schedule builds if the same runner os required for two different builds
+✅ User can bulk edit labels on all runners, the drop down remembers all the labels added","✅ Kubernetes runner support
+✅ Shared runners support
+✅ Better UI control on runners for changing tags, adding permissions 
+✅ Asks for executor information while setting up - not sure if it helps","✅ NPM, Yarn, Brew and normal download is available 
+✅ The documentation gives alternative option for downloading: https://codefresh-io.github.io/cli/installation/
+✅ You can also obtain an API Key from  https://g.codefresh.io/user/settings.
+✅ Option to runs a demo pipeline after install 
+"
+Cons,❌ The runners only apply to the jobs and not individual steps,"❌ Unclear errors when the build could not find the runners
+❌  Extensive documentation page makes it hard to get started
+❌  Does not tell how to add runner information inside Yaml
+❌ The token does not update on page refresh","❌ No tags support, you define the default runner or assign it to a pipeline
+❌ Runs only on Kubernetes"
+Updates/New versions,The runner gets automatically updated,Only updates if it is on brew,

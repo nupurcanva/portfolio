@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-platform design for Bitbucket Pipelines runners - Nupur Aggarwal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="header-title">Nupur Aggarwal</h1>
+                <p class="header-subtitle">Multi-platform design for Bitbucket Pipelines runners</p>
+            </div>
+        </header>
+
+        <!-- Navigation Section -->
+        <div class="project-navigation">
+            <div class="project-navigation-content">
+                <!-- Back Button -->
+                <button class="nav-button back-button" onclick="window.location.href='index.html'">
+                    <img src="assets/images/icon-arrow-down.svg" alt="Back" class="nav-icon back-icon">
+                    <span>Back to Home</span>
+                </button>
+                
+                <!-- Project Navigation -->
+                <div class="project-nav-controls">
+                    <button class="nav-button prev-button" onclick="navigateToProject('previous')">
+                        <img src="assets/images/icon-chevron-down.svg" alt="Previous" class="nav-icon prev-icon">
+                        <span>Previous Project</span>
+                    </button>
+                    <button class="nav-button next-button" onclick="navigateToProject('next')">
+                        <span>Next Project</span>
+                        <img src="assets/images/icon-chevron-down.svg" alt="Next" class="nav-icon next-icon">
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Divider -->
+        <div class="section-divider"></div>
+
+        <!-- Project Content Section -->
+        <section class="project-page">
+            <div class="project-page-content">
+                <div class="project-intro">
+                    <h1 class="project-title">Multi-platform design for Bitbucket Pipelines runners</h1>
+                    <p class="project-subtitle">Case study: Crawl, walk and then run</p>
+                </div>
+
+                <!-- Content Sections -->
+                <div class="project-content-sections">
+                    
+                    <!-- Project Overview -->
+                    <div class="content-section">
+                        <div class="section-image">
+                            <img src="assets/images/Multi-platform design for Bitbucket Pipelines runn 5f51f5c9025f4c27ac9e19b5a1a29a36/run.png" alt="Multi-platform runners illustration" class="content-image">
+                        </div>
+                    </div>
+
+                    <!-- The Problem -->
+                    <div class="content-section">
+                        <h2>🏃🏻 The Problem</h2>
+                        <p>Atlassian's Bitbucket Pipelines offers an easy-to-get-started cloud-based CI/CD solution, but over the years many teams have run into issues, like users cannot access resources in their private network that are protected by firewalls, using other platforms like macOS, scalability issues, rate-limiting, compliance and technical limitations of a cloud-based solution.</p>
+                        
+                        <p>This hinders them from using Bitbucket Pipelines as their CI/CD solution. Users want access to internal resources to run integration tests against private resources(eg: database, application), deploy to internal infrastructure, use MacOS or windows platform and access hosted secrets manager.</p>
+                        
+                        <div class="section-image">
+                            <img src="assets/images/Multi-platform design for Bitbucket Pipelines runn 5f51f5c9025f4c27ac9e19b5a1a29a36/Group_20.jpg" alt="Problem illustration" class="content-image">
+                        </div>
+                        
+                        <p>To do this, users have to open a port in their firewall to do a deployment from Bitbucket Pipeline into their private network, which has security implications, and it is a costly affair to move all of their code and CI/CD to a competing tool. It would be solved if Bitbucket allowed them to run pipeline steps in their own infrastructure.</p>
+                        
+                        <div class="callout">
+                            <div class="callout-icon">💡</div>
+                            <div class="callout-content">
+                                <strong>Research finding:</strong> Users cannot use VPN because of security implications, but most users were open to the idea of "Runners" - like tiny software installed on your hardware, which they can self-host.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Impact of this problem -->
+                    <div class="content-section">
+                        <h2>💰 Impact of this problem</h2>
+                        <p>Users are using another CI/CD tool. This causes more friction because they have to set up and pay for another tool, and they miss out on the integrated code and CI/CD experience. Some are moving to other platforms (GitHub/GitLab) since both of them provide a solution to the above problem.</p>
+                        
+                        <div class="callout">
+                            <div class="callout-icon">⚡</div>
+                            <div class="callout-content">
+                                <strong>The opportunity:</strong> Users looked for a predictable bill - using the on-premises would cut their costs
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- The Challenge -->
+                    <div class="content-section">
+                        <h2>💥 The challenge</h2>
+                        <div class="highlight-box">
+                            <h3>Create an easy-to-use feature that supports all platforms (Windows, macOS etc) so users are able to access their protected resources and Bitbucket Pipelines is the tool of choice for CI/CD.</h3>
+                        </div>
+                    </div>
+
+                    <!-- My Role -->
+                    <div class="content-section">
+                        <h2>👩🏻‍🔧 My Role</h2>
+                        <div class="highlight-box">
+                            <p><strong>🔑 Key skills and outcomes in this project:</strong> Solving complex design problems, domain knowledge, communication, Scalable design</p>
+                        </div>
+                        <p>I am the only product designer for the Bitbucket Pipelines team and the triad counterpart for the Pipelines team.</p>
+                        
+                        <p>During the period, I worked closely with other Bitbucket designers, content designers, product managers, developers and product marketing across Bitbucket.</p>
+                        
+                        <p>The project ran for a whole year, from August 2020 to July 2021. I looked at the UX research, gathered technical requirements and designed the UI for the last year. During this time we researched and tested it many times, and being agile was crucial to delivering the right experiences for both product and design. I worked with the Product manager to get the right data and the engineering lead to set the right values and plan for the updates.</p>
+                    </div>
+
+                    <!-- What are Bitbucket Pipelines -->
+                    <div class="content-section">
+                        <h2>🎽 What are Bitbucket Pipelines (CI/CD) and Runners?</h2>
+                        <p>Imagine a developer writing some code. They push it to the cloud to integrate it with the rest of the code. Every time they push it, it is being tested, verified & integrated into the codebase and delivered to their customers. This is known as CI/CD (Continuous integration and continuous deployment)</p>
+                        
+                        <div class="section-image">
+                            <img src="assets/images/Multi-platform design for Bitbucket Pipelines runn 5f51f5c9025f4c27ac9e19b5a1a29a36/Frame.png" alt="CI/CD process illustration" class="content-image">
+                        </div>
+                        
+                        <p><strong>Runners</strong> are the way we solved the above problem, so imagine providing a way to install a small software on your computer to run all the CI/CD without sharing it with the cloud. Self-hosted runners offer more control of hardware, control of the Operating system and more security and network options than Bitbucket-hosted runners provide for running the CI/CD.</p>
+                    </div>
+
+                    <!-- Research hypothesis and method -->
+                    <div class="content-section">
+                        <h2>🔍 Research hypothesis and method</h2>
+                        <p>Our hypothesis is that users want to run pipelines in their private networks and the way they can do that is by self-hosted runners. We need to begin to validate this belief, and this research represents a step toward understanding our customer's requirements and evaluating the solution. We, therefore, seek to:</p>
+                        
+                        <ul>
+                            <li>Understand user's requirements, scale and challenges with self-hosted runners</li>
+                            <li>Identify the best solution offering by evaluating the design thinking</li>
+                            <li>Learn how we can prioritize future iterations for the project</li>
+                        </ul>
+                        
+                        <p>I did 6 1-hour interviews with large and medium-sized customers. The roles of the interviewees were - Ops engineers, embedded systems developers and lead software developers. I compiled the findings and shared them as a Confluence page with the team before we kicked off the design process.</p>
+                        
+                        <h3>🗒️ The requirements</h3>
+                        <h4>❓ Who is using Bitbucket Runners?</h4>
+                        
+                        <div class="journey-steps">
+                            <div class="journey-step">
+                                <div class="journey-step-content">
+                                    <div class="journey-step-image">
+                                        <img src="assets/images/Multi-platform design for Bitbucket Pipelines runn 5f51f5c9025f4c27ac9e19b5a1a29a36/Illustration_(Meeple_Effie).png" alt="Repository Manager persona" class="journey-image">
+                                    </div>
+                                    <div class="journey-step-text">
+                                        <h4>The Repository Manager</h4>
+                                        <p>They could be the Team lead, a System administrator, a senior developer or a developer. This user must have admin access to the repository, as they set up the repository, variables, runners and the architecture for their team.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="journey-step">
+                                <div class="journey-step-content">
+                                    <div class="journey-step-image">
+                                        <img src="assets/images/Multi-platform design for Bitbucket Pipelines runn 5f51f5c9025f4c27ac9e19b5a1a29a36/Illustration_(Meeple_Angie).png" alt="Developer persona" class="journey-image">
+                                    </div>
+                                    <div class="journey-step-text">
+                                        <h4>The Developer</h4>
+                                        <p>This user utilizes the build setup to run their builds, tests and deployments. They may use the runners to configure new builds, run tests, and are interested in seeing the outcome.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="journey-step">
+                                <div class="journey-step-content">
+                                    <div class="journey-step-image">
+                                        <img src="assets/images/Multi-platform design for Bitbucket Pipelines runn 5f51f5c9025f4c27ac9e19b5a1a29a36/Illustration_(Thinking_Meeple_Leo).png" alt="Workspace Manager persona" class="journey-image">
+                                    </div>
+                                    <div class="journey-step-text">
+                                        <h4>The Workspace Manager</h4>
+                                        <p>They could be the Team lead, a System administrator, a senior developer or a developer. This user must have admin access to the account/workspace/project. Manages CI/CD for a bigger team or multiple projects.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- The project set-up -->
+                    <div class="content-section">
+                        <h2>🍳 The project set-up</h2>
+                        <div class="callout">
+                            <div class="callout-icon">💡</div>
+                            <div class="callout-content">
+                                Being agile was crucial to delivering the right experiences for both product and design. We learnt how the Linux runners performed and updated the experience for the versions after the open beta.
+                            </div>
+                        </div>
+                        
+                        <p>I helped decided the multi-month project set-up and break down the various phases of product design to happen in parallel to the development. The time that was taken to develop this was disproportionately larger compared to the product design timeline, so we fit in with other product design initiatives while supporting the UI developers on this project. A rough timeline and breakdown of the project were as follows:</p>
+                        
+                        <ul>
+                            <li><strong>🔍 Version 1: Runners (August - September 2020)</strong><br/>Design: Initial research, competitive analysis, requirements gathering and refining, early explorations, UI design, technical design and design specifications handover, invite users to sign up for the Early Access program.<br/>Eng: Feature set-up, writing epics and technical specifications gathering</li>
+                            <li><strong>🐦 Early Access Program (EAP)</strong><br/>Collect early feedback from customers through a survey and community group</li>
+                            <li><strong>🌦 (October - November 2020)</strong><br/>Backend stuff</li>
+                            <li><strong>⭐️ Open Beta Release</strong><br/>Start collecting feedback from the Early access customers (100+ customers) and start preparing the next two versions</li>
+                            <li><strong>👩🏼‍💻 Version 2: Workspace runners November (2020 - March 2021)</strong><br/>Design: Initial research, requirements gathering and refining, early explorations and start receiving feedback from the early access program<br/>Eng: Finishing up phase 1, set up phase 2</li>
+                            <li><strong>🏢 Version 3: Enterprise runners (April 2021)</strong><br/>Design: Initial research, requirements gathering and refining, early explorations and start receiving feedback from the early access program.<br/>Eng: Finishing up phase 1, set up phase 2</li>
+                            <li><strong>🎉 General Availability release:</strong> Start collecting feedback from the 500+ customers using Version 1, 2 and 3</li>
+                            <li><strong>💻 Version 4: Windows runners (May - Jul 2021)</strong><br/>Design: Initial research, customer interviews, requirements gathering and refining updating UI and start receiving feedback</li>
+                            <li><strong>🍎 Version 5: MacOS runners (October 2021)</strong></li>
+                        </ul>
+                    </div>
+
+                    <!-- The solution -->
+                    <div class="content-section">
+                        <h2>🥚 The solution</h2>
+                        
+                        <h3>🌸 The user flow</h3>
+                        <div class="section-image">
+                            <img src="assets/images/Multi-platform design for Bitbucket Pipelines runn 5f51f5c9025f4c27ac9e19b5a1a29a36/Group_17.jpg" alt="Complete user flow diagram" class="content-image">
+                        </div>
+                        
+                        <h3>🪆 Nested runners</h3>
+                        <div class="section-image">
+                            <img src="assets/images/Multi-platform design for Bitbucket Pipelines runn 5f51f5c9025f4c27ac9e19b5a1a29a36/model.png" alt="Nested runners model diagram" class="content-image">
+                        </div>
+                    </div>
+
+                    <!-- Design considerations -->
+                    <div class="content-section">
+                        <h2>🤔 Design considerations</h2>
+                        
+                        <div class="considerations-list">
+                            <div class="consideration">
+                                <div class="section-image">
+                                    <img src="assets/images/Multi-platform design for Bitbucket Pipelines runn 5f51f5c9025f4c27ac9e19b5a1a29a36/Illustration_(Server_Growth).png" alt="Server growth illustration" class="content-image" style="width: 200px;">
+                                </div>
+                                <h4>Provide updates while maintaining context</h4>
+                                <p>Provide developers real-time updates on runners they've subscribed to. Thread subsequent activity instead of starting a new thread each time.</p>
+                            </div>
+                            
+                            <div class="consideration">
+                                <div class="section-image">
+                                    <img src="assets/images/Multi-platform design for Bitbucket Pipelines runn 5f51f5c9025f4c27ac9e19b5a1a29a36/Illustration_(Approved_Versions).png" alt="Approved versions illustration" class="content-image" style="width: 200px;">
+                                </div>
+                                <h4>Talk turkey</h4>
+                                <p>To begin with, we've chosen a Command-line based configuration model instead of GUI based interface for our developer persona. However, have experiences to make it easy to access the list of available commands and what they do.</p>
+                            </div>
+                            
+                            <div class="consideration">
+                                <div class="section-image">
+                                    <img src="assets/images/Multi-platform design for Bitbucket Pipelines runn 5f51f5c9025f4c27ac9e19b5a1a29a36/Illustration_(Server).png" alt="Server illustration" class="content-image" style="width: 200px;">
+                                </div>
+                                <h4>Give extra controls in the place where they like to work</h4>
+                                <p>Manage or update the runner directly from the terminal</p>
+                            </div>
+                            
+                            <div class="consideration">
+                                <div class="section-image">
+                                    <img src="assets/images/Multi-platform design for Bitbucket Pipelines runn 5f51f5c9025f4c27ac9e19b5a1a29a36/Illustration_(Large_File_Storage).png" alt="Large file storage illustration" class="content-image" style="width: 200px;">
+                                </div>
+                                <h4>Provide length and breadth</h4>
+                                <p>Users should be able to configure macOS, windows or Linux runners, and the design would be able to support all use-cases</p>
+                            </div>
+                            
+                            <div class="consideration">
+                                <div class="section-image">
+                                    <img src="assets/images/Multi-platform design for Bitbucket Pipelines runn 5f51f5c9025f4c27ac9e19b5a1a29a36/Illustration_(Jira).png" alt="Jira integration illustration" class="content-image" style="width: 200px;">
+                                </div>
+                                <h4>Align with Bitbucket and Atlassian Design Guidelines</h4>
+                                <p>Align with the management screens and the installation flow</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience breakdown -->
+                    <div class="content-section">
+                        <h2>🌈 Experience breakdown</h2>
+                        <p>There are three types of jobs we had to do to deliver a full experience for the Runners. They were further broken down to requirements and were parallelized as much as possible. The jobs and their requirements:</p>
+                        <ol>
+                            <li><strong>Managing a runner</strong></li>
+                            <li><strong>Using a runner</strong></li>
+                        </ol>
+                    </div>
+
+                    <!-- Managing a Runner -->
+                    <div class="content-section">
+                        <h2>Managing a Runner</h2>
+                        <p>I experimented with a few different styles for the Runner Installation and management. We wanted to give the easiest way to get started and scale up as the requirements grow. To get started on the first experience, I created a user journey and a few explorations and we conducted a user study to get input on the experience and the requirements.</p>
+                        
+                        <div class="exploration-option">
+                            <h4>1️⃣ Exploration Option 1</h4>
+                            <p>Show all the options upfront on the runner's page in the settings. The user can configure, add tags and add runners to the CI/CD configuration. It also shows a preview of the configuration. This looked overwhelming.</p>
+                            <div class="section-image">
+                                <img src="assets/images/Multi-platform design for Bitbucket Pipelines runn 5f51f5c9025f4c27ac9e19b5a1a29a36/Group_500.png" alt="Exploration option 1" class="content-image">
+                            </div>
+                        </div>
+                        
+                        <div class="exploration-option">
+                            <h4>2️⃣ Exploration option 2</h4>
+                            <p>A modal instead of the full page approach</p>
+                            <div class="section-image">
+                                <img src="assets/images/Multi-platform design for Bitbucket Pipelines runn 5f51f5c9025f4c27ac9e19b5a1a29a36/Group_501.png" alt="Exploration option 2" class="content-image">
+                            </div>
+                        </div>
+                        
+                        <div class="exploration-option">
+                            <h4>3️⃣ Finalized version</h4>
+                            <p>Simplified 3-step approach with small achievable actions on each step. This is step 1 of 3</p>
+                            <div class="callout">
+                                <div class="callout-icon">💡</div>
+                                <div class="callout-content">
+                                    Users would have made up their minds before starting the installation as there would be a real need
+                                </div>
+                            </div>
+                            <div class="section-image">
+                                <img src="assets/images/Multi-platform design for Bitbucket Pipelines runn 5f51f5c9025f4c27ac9e19b5a1a29a36/configure.png" alt="Final configuration step 1" class="content-image">
+                            </div>
+                        </div>
+                        
+                        <h4>Runner Management</h4>
+                        <p>We added the screen for viewing, adding, and removing the runners from the settings page.</p>
+                        <div class="callout">
+                            <div class="callout-icon">💡</div>
+                            <div class="callout-content">
+                                Our user research found that most users have less than 10 runners on this screen, so this design would work for most users without pagination.
+                            </div>
+                        </div>
+                        <div class="section-image">
+                            <img src="assets/images/Multi-platform design for Bitbucket Pipelines runn 5f51f5c9025f4c27ac9e19b5a1a29a36/Frame_12.png" alt="Runner management screen" class="content-image">
+                        </div>
+                    </div>
+
+                    <!-- Using a runner -->
+                    <div class="content-section">
+                        <h2>Using a runner</h2>
+                        <p>This is the second step, after configuring the runner, the user is educated on how to operate the runner by copying the runner command and adding them to the CI/CD configuration.</p>
+                        
+                        <div class="callout">
+                            <div class="callout-icon">💡</div>
+                            <div class="callout-content">
+                                Users appreciated the screen with clear instructions on this screen. They understood that they had to go to the terminal for completing this
+                            </div>
+                        </div>
+                        
+                        <div class="section-image">
+                            <img src="assets/images/Multi-platform design for Bitbucket Pipelines runn 5f51f5c9025f4c27ac9e19b5a1a29a36/configure2.png" alt="Configuration step 2" class="content-image">
+                        </div>
+                        
+                        <h4>Managing the runner on the terminal</h4>
+                        <div class="callout">
+                            <div class="callout-icon">💡</div>
+                            <div class="callout-content">
+                                <strong>Research finding:</strong> Users usually complete the installation in the UI and edit the pipeline in the terminal. Giving them a great user experience in the terminal for editing (not pictured here) is important.
+                            </div>
+                        </div>
+                        
+                        <div class="section-image">
+                            <img src="assets/images/Multi-platform design for Bitbucket Pipelines runn 5f51f5c9025f4c27ac9e19b5a1a29a36/configure3.png" alt="Terminal management" class="content-image">
+                        </div>
+                    </div>
+
+                    <!-- Success metrics -->
+                    <div class="content-section">
+                        <h2>❤️‍🔥 What is success for our customer(s) and us, and how do we measure that?</h2>
+                        
+                        <ul>
+                            <li><strong>Design goal:</strong> It is really simple to install and manage runners
+                                <ul>
+                                    <li>See users successfully setting up runners (more runners installed each week)</li>
+                                    <li>The number of support cases related to runners is low</li>
+                                    <li>The number of healthy runners connected to pipelines is increasing</li>
+                                </ul>
+                            </li>
+                            <li><strong>Customer Goal:</strong> Users are able to access their protected resources, hence get their job done
+                                <ul>
+                                    <li>See an increase in steps successfully executing on runners</li>
+                                    <li>The number of customer requests and support is low</li>
+                                </ul>
+                            </li>
+                            <li><strong>Business goal:</strong> Pipelines are considered as an alternative to server-based CI/CD tools
+                                <ul>
+                                    <li>Percentage of accounts upgrading to standard or premium from free.</li>
+                                    <li>Percentage of successful migrations from Bamboo and Jenkins</li>
+                                    <li>% adoption of pipelines by Server migrated users</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Social mentions -->
+                    <div class="content-section">
+                        <h2>✨ Social mentions after the release</h2>
+                        <p>The release generated positive feedback on social media:</p>
+                        <ul>
+                            <li><a href="https://twitter.com/Bitbucket/status/1424790424925839367" target="_blank">https://twitter.com/Bitbucket/status/1424790424925839367</a></li>
+                            <li><a href="https://twitter.com/dwdRAJU/status/1431285387381534724" target="_blank">https://twitter.com/dwdRAJU/status/1431285387381534724</a></li>
+                            <li><a href="https://twitter.com/quicksketch/status/1100312876290428928" target="_blank">https://twitter.com/quicksketch/status/1100312876290428928</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Closing notes -->
+                    <div class="content-section">
+                        <h2>🌂 Closing notes</h2>
+                        <p>The design considerations allowed me to think broadly and apply the design model to future iterations of the runners.</p>
+                        
+                        <h3>Outside inside</h3>
+                        <p>Obtain new viewpoints. Speak to outside users. To get ideas and set your product against others, look at products that are both closely and distantly competitive to yours.</p>
+                        
+                        <h3>Think long-term scalability</h3>
+                        <p>A prescription for short-term success but failure in the long run is to not have a vision for what the product will look like in a few years. It may cause the product to be directed in the wrong direction, and a U-turn may be very costly.</p>
+                        
+                        <h3>Inclusive design</h3>
+                        <p>When creating products, accessibility is a crucial factor. It goes without saying that we should be inclusive of users with disabilities. As a designer, it's important to ensure the basics like maintaining the minimum <strong>colour contrasts</strong> and focus states while creating mockups.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="section-divider"></div>
+
+        <!-- Bottom Navigation Section -->
+        <div class="project-navigation project-navigation-bottom">
+            <div class="project-navigation-content">
+                <!-- Back Button -->
+                <button class="nav-button back-button" onclick="window.location.href='index.html'">
+                    <img src="assets/images/icon-arrow-down.svg" alt="Back" class="nav-icon back-icon">
+                    <span>Back to Home</span>
+                </button>
+                
+                <!-- Project Navigation -->
+                <div class="project-nav-controls">
+                    <button class="nav-button prev-button" onclick="navigateToProject('previous')">
+                        <img src="assets/images/icon-chevron-down.svg" alt="Previous" class="nav-icon prev-icon">
+                        <span>Previous Project</span>
+                    </button>
+                    <button class="nav-button next-button" onclick="navigateToProject('next')">
+                        <span>Next Project</span>
+                        <img src="assets/images/icon-chevron-down.svg" alt="Next" class="nav-icon next-icon">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Project navigation function
+        function navigateToProject(direction) {
+            // Define project pages in order
+            const projects = [
+                'smart-devops-experiences-jira.html',
+                'integrations-chatgpt-claude.html',
+                'ux-approach.html',
+                'skills.html',
+                'bitbucket-pipelines-experience-vision.html',
+                'multi-platform-bitbucket-pipelines-runners.html',
+                // Add more project pages here as they are created
+            ];
+            
+            const currentProject = 'multi-platform-bitbucket-pipelines-runners.html';
+            const currentIndex = projects.indexOf(currentProject);
+            
+            if (direction === 'previous' && currentIndex > 0) {
+                window.location.href = projects[currentIndex - 1];
+            } else if (direction === 'next' && currentIndex < projects.length - 1) {
+                window.location.href = projects[currentIndex + 1];
+            } else {
+                // If no previous/next project, return to homepage
+                window.location.href = 'index.html';
+            }
+        }
+    </script>
+</body>
+</html>
