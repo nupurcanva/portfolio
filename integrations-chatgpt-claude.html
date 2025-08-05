@@ -932,29 +932,41 @@
 
     <script src="script.js"></script>
     <script>
+        // Check authentication on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            if (!window.projectAuth || !window.projectAuth.hasAccess()) {
+                window.location.href = 'index.html';
+                return;
+            }
+        });
+
         // Project navigation function
         function navigateToProject(direction) {
-            // Define project pages in order
+            // Check authentication before navigation
+            if (!window.projectAuth || !window.projectAuth.hasAccess()) {
+                window.location.href = 'index.html';
+                return;
+            }
+
+            // Define only the 4 featured project pages in order
             const projects = [
-                'smart-devops-experiences-jira.html',
                 'integrations-chatgpt-claude.html',
-                'ux-approach.html',
-                'skills.html',
+                'smart-devops-experiences-jira.html',
                 'bitbucket-pipelines-experience-vision.html',
-                'multi-platform-bitbucket-pipelines-runners.html',
-                // Add more project pages here as they are created
+                'multi-platform-bitbucket-pipelines-runners.html'
             ];
             
             const currentProject = 'integrations-chatgpt-claude.html';
             const currentIndex = projects.indexOf(currentProject);
             
-            if (direction === 'previous' && currentIndex > 0) {
-                window.location.href = projects[currentIndex - 1];
-            } else if (direction === 'next' && currentIndex < projects.length - 1) {
-                window.location.href = projects[currentIndex + 1];
-            } else {
-                // If no previous/next project, return to homepage
-                window.location.href = 'index.html';
+            if (direction === 'previous') {
+                // Circular navigation: if at first project, go to last project
+                const prevIndex = currentIndex === 0 ? projects.length - 1 : currentIndex - 1;
+                window.location.href = projects[prevIndex];
+            } else if (direction === 'next') {
+                // Circular navigation: if at last project, go to first project
+                const nextIndex = currentIndex === projects.length - 1 ? 0 : currentIndex + 1;
+                window.location.href = projects[nextIndex];
             }
         }
     </script>

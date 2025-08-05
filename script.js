@@ -449,4 +449,142 @@ document.addEventListener('DOMContentLoaded', function() {
     sections.forEach(section => {
         sectionObserver.observe(section);
     });
-}); 
+});
+
+// Project Authentication System
+class ProjectAuth {
+    constructor() {
+        this.password = 'Magic';
+        this.storageKey = 'portfolio_project_access';
+        this.protectedProjects = [
+            'integrations-chatgpt-claude.html',
+            'smart-devops-experiences-jira.html',
+            'bitbucket-pipelines-experience-vision.html',
+            'multi-platform-bitbucket-pipelines-runners.html'
+        ];
+        this.createModal();
+    }
+
+    // Check if user has access
+    hasAccess() {
+        return sessionStorage.getItem(this.storageKey) === 'true';
+    }
+
+    // Grant access
+    grantAccess() {
+        sessionStorage.setItem(this.storageKey, 'true');
+    }
+
+    // Check if URL is a protected project
+    isProtectedProject(url) {
+        return this.protectedProjects.some(project => url.includes(project));
+    }
+
+    // Create the authentication modal
+    createModal() {
+        if (document.getElementById('auth-modal')) return; // Already exists
+
+        const modal = document.createElement('div');
+        modal.id = 'auth-modal';
+        modal.className = 'auth-modal';
+        modal.innerHTML = `
+            <div class="auth-modal-backdrop"></div>
+            <div class="auth-modal-content">
+                <div class="auth-modal-header">
+                    <h3>Project Access</h3>
+                </div>
+                <div class="auth-modal-body">
+                    <p>Please enter the password to access featured projects:</p>
+                    <input type="password" id="auth-password" placeholder="Enter password" autocomplete="off">
+                    <div id="auth-error" class="auth-error" style="display: none;">Incorrect password. Please try again.</div>
+                </div>
+                <div class="auth-modal-footer">
+                    <button id="auth-submit" class="auth-submit-btn">Access Projects</button>
+                    <button id="auth-cancel" class="auth-cancel-btn">Cancel</button>
+                </div>
+            </div>
+        `;
+        
+        document.body.appendChild(modal);
+        this.bindModalEvents();
+    }
+
+    // Bind modal events
+    bindModalEvents() {
+        const modal = document.getElementById('auth-modal');
+        const passwordInput = document.getElementById('auth-password');
+        const submitBtn = document.getElementById('auth-submit');
+        const cancelBtn = document.getElementById('auth-cancel');
+        const errorDiv = document.getElementById('auth-error');
+
+        // Submit password
+        const submitPassword = () => {
+            const enteredPassword = passwordInput.value.trim();
+            if (enteredPassword.toLowerCase() === this.password.toLowerCase()) {
+                this.grantAccess();
+                const targetUrl = this.pendingNavigation;
+                this.hideModal();
+                if (targetUrl) {
+                    window.location.href = targetUrl;
+                }
+            } else {
+                errorDiv.style.display = 'block';
+                passwordInput.value = '';
+                passwordInput.focus();
+            }
+        };
+
+        submitBtn.addEventListener('click', submitPassword);
+        
+        passwordInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                submitPassword();
+            }
+        });
+
+        cancelBtn.addEventListener('click', () => {
+            this.hideModal();
+        });
+
+        // Close modal when clicking backdrop
+        modal.querySelector('.auth-modal-backdrop').addEventListener('click', () => {
+            this.hideModal();
+        });
+    }
+
+    // Show modal
+    showModal(targetUrl = null) {
+        this.pendingNavigation = targetUrl;
+        const modal = document.getElementById('auth-modal');
+        const passwordInput = document.getElementById('auth-password');
+        const errorDiv = document.getElementById('auth-error');
+        
+        modal.style.display = 'flex';
+        errorDiv.style.display = 'none';
+        passwordInput.value = '';
+        passwordInput.focus();
+        
+        // Prevent body scroll
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Hide modal
+    hideModal() {
+        const modal = document.getElementById('auth-modal');
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+        this.pendingNavigation = null;
+    }
+
+    // Check access and navigate
+    checkAndNavigate(url) {
+        if (this.hasAccess()) {
+            window.location.href = url;
+        } else {
+            this.showModal(url);
+        }
+    }
+}
+
+// Initialize authentication system
+window.projectAuth = new ProjectAuth(); 
