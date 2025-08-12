@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UX Design Introduction with ParticlesGL</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background: #f8f9fa;
+        }
+
+        /* Introduction Section Styling */
+        .introduction-section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #2c3e50;
+            position: relative;
+        }
+
+        .scroll-indicator {
+            width: 50px;
+            height: 50px;
+            border: 2px solid #2c3e50;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .scroll-indicator:hover {
+            transform: translateY(3px);
+            background: #2c3e50;
+            color: white;
+        }
+
+        /* Main Content Card */
+        .content-card {
+            background: white;
+            border-radius: 24px;
+            padding: 0;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Illustration Area */
+        .illustration-container {
+            position: relative;
+            height: 400px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        /* Create the UX design illustration with CSS */
+        .design-illustration {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .design-elements {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+            z-index: 2;
+        }
+
+        .button-stack {
+            background: rgba(255,255,255,0.9);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .design-button {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            margin-bottom: 0.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .design-button:nth-child(1) {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .design-button:nth-child(2) {
+            background: #fff3e0;
+            color: #f57c00;
+        }
+
+        .design-button:nth-child(3) {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+
+        .design-button::before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: currentColor;
+        }
+
+        .design-button:nth-child(1)::before { content: '●'; }
+        .design-button:nth-child(2)::before { content: '★'; }
+        .design-button:nth-child(3)::before { content: '▲'; }
+
+        .workflow-diagram {
+            background: rgba(255,255,255,0.9);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+            position: relative;
+        }
+
+        .role-badge {
+            background: #2c3e50;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .workflow-box {
+            width: 120px;
+            height: 80px;
+            background: #f8f9fa;
+            border: 2px solid #dee2e6;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #495057;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .workflow-connection {
+            position: absolute;
+            width: 2px;
+            height: 20px;
+            background: #6c757d;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -10px;
+        }
+
+        /* Content Section */
+        .content-section {
+            padding: 3rem;
+        }
+
+        .content-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+        }
+
+        .content-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .read-more-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: white;
+            border: 2px solid #2c3e50;
+            border-radius: 50px;
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .read-more-btn:hover {
+            background: #2c3e50;
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .read-more-btn::after {
+            content: '→';
+            font-size: 1.2rem;
+        }
+
+        /* Particle overlay for the illustration */
+        .particle-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .design-elements {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .illustration-container {
+                height: 300px;
+            }
+
+            .content-section {
+                padding: 2rem;
+            }
+
+            .content-header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        /* Animation classes */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Introduction Section -->
+    <section class="introduction-section">
+        <!-- Section Header with Particle Effect -->
+        <div class="section-header">
+            <h1 class="section-title particle-title">Introduction</h1>
+            <div class="scroll-indicator">
+                ↓
+            </div>
+        </div>
+
+        <!-- Main Content Card -->
+        <div class="content-card animate-on-scroll">
+            <!-- Illustration with Particle Effects -->
+            <div class="illustration-container">
+                <!-- Background particle effect -->
+                <div class="particle-overlay particle-background"></div>
+                
+                <div class="design-illustration">
+                    <div class="design-elements">
+                        <!-- Button Stack with Particle Effect -->
+                        <div class="button-stack particle-buttons">
+                            <div class="design-button">Button</div>
+                            <div class="design-button">Button</div>
+                            <div class="design-button">Button</div>
+                        </div>
+
+                        <!-- Workflow Diagram with Particle Effect -->
+                        <div class="workflow-diagram particle-workflow">
+                            <div class="role-badge">UX Designer</div>
+                            <div class="workflow-box">
+                                Graphic Designer
+                                <div class="workflow-connection"></div>
+                            </div>
+                            <div class="workflow-box">Web Designer</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Section -->
+            <div class="content-section">
+                <div class="content-header">
+                    <h2 class="content-title particle-content-title">Read: How I approach UX Design</h2>
+                    <a href="#" class="read-more-btn"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional sections to demonstrate different effects -->
+    <section class="introduction-section">
+        <div class="content-card animate-on-scroll">
+            <div class="illustration-container" style="background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);">
+                <div class="particle-overlay particle-background-2"></div>
+                <div style="text-align: center; z-index: 2; color: white;">
+                    <h2 class="particle-section-demo" style="font-size: 3rem; margin-bottom: 1rem;">DESIGN</h2>
+                    <p style="font-size: 1.2rem; opacity: 0.9;">Interactive particle effects</p>
+                </div>
+            </div>
+            <div class="content-section">
+                <h3 class="particle-demo-title" style="font-size: 2rem; color: #2c3e50; margin-bottom: 1rem;">Creative Process</h3>
+                <p style="color: #666; line-height: 1.8;">This section demonstrates how particle effects can enhance any content area, making it more engaging and interactive.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Required Libraries - Add these to your website -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lil-gui@0.19.1/dist/lil-gui.umd.min.js"></script>
+    
+    <!-- You need to include your particlesGL.js file -->
+    <script src="scripts/particlesGL.min.js"></script>
+
+    <script>
+        // Store all particle effects for cleanup
+        let particleEffects = [];
+
+        // Initialize particle effects when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeParticleEffects();
+            setupScrollAnimations();
+        });
+
+        function initializeParticleEffects() {
+            console.log('Initializing particle effects...');
+
+            // 1. Title Effect - Elegant particles for the main title
+            if (document.querySelector('.particle-title')) {
+                particleEffects.push(
+                    particlesGL({
+                        target: '.particle-title',
+                        character: '◆',
+                        particleSize: 0.06,
+                        particleColor: '#2c3e50',
+                        tilt: true,
+                        tiltFactor: 0.2,
+                        tiltSpeed: 0.04,
+                        displaceStrength: 0.8,
+                        displaceRadius: 0.15,
+                        velocityInfluence: 0.4,
+                        returnSpeed: 0.05,
+                        sampling: 3,
+                        on: {
+                            init: (instance) => console.log('Title particles initialized!')
+                        }
+                    })
+                );
+            }
+
+            // 2. Background Particle Effect - Subtle background animation
+            if (document.querySelector('.particle-background')) {
+                // Create a simple geometric pattern
+                const backgroundGeometry = createGridGeometry(0.8, 0.6, 12, 8);
+                particleEffects.push(
+                    particlesGL({
+                        target: '.particle-background',
+                        geometry: backgroundGeometry,
+                        character: '·',
+                        particleSize: 0.02,
+                        particleColor: 'rgba(255,255,255,0.6)',
+                        tilt: false,
+                        displaceStrength: 0.3,
+                        displaceRadius: 0.08,
+                        velocityInfluence: 0.2,
+                        returnSpeed: 0.08,
+                        on: {
+                            init: (instance) => console.log('Background particles initialized!')
+                        }
+                    })
+                );
+            }
+
+            // 3. Button Stack Effect - Interactive button particles
+            if (document.querySelector('.particle-buttons')) {
+                particleEffects.push(
+                    particlesGL({
+                        target: '.particle-buttons',
+                        character: '●',
+                        particleSize: 0.04,
+                        particleColor: 'sample', // Sample colors from the buttons
+                        tilt: true,
+                        tiltFactor: 0.3,
+                        tiltSpeed: 0.06,
+                        displaceStrength: 1.0,
+                        displaceRadius: 0.12,
+                        velocityInfluence: 0.6,
+                        returnSpeed: 0.04,
+                        sampling: 4,
+                        on: {
+                            init: (instance) => console.log('Button particles initialized!')
+                        }
+                    })
+                );
+            }
+
+            // 4. Workflow Diagram Effect - Professional diagram particles
+            if (document.querySelector('.particle-workflow')) {
+                particleEffects.push(
+                    particlesGL({
+                        target: '.particle-workflow',
+                        character: '▲',
+                        particleSize: 0.035,
+                        particleColor: 'sample',
+                        tilt: true,
+                        tiltFactor: 0.15,
+                        tiltSpeed: 0.03,
+                        displaceStrength: 0.7,
+                        displaceRadius: 0.1,
+                        velocityInfluence: 0.3,
+                        returnSpeed: 0.06,
+                        sampling: 5,
+                        on: {
+                            init: (instance) => console.log('Workflow particles initialized!')
+                        }
+                    })
+                );
+            }
+
+            // 5. Content Title Effect - Subtle text enhancement
+            if (document.querySelector('.particle-content-title')) {
+                particleEffects.push(
+                    particlesGL({
+                        target: '.particle-content-title',
+                        character: '•',
+                        particleSize: 0.03,
+                        particleColor: '#2c3e50',
+                        tilt: true,
+                        tiltFactor: 0.1,
+                        tiltSpeed: 0.02,
+                        displaceStrength: 0.5,
+                        displaceRadius: 0.08,
+                        velocityInfluence: 0.2,
+                        returnSpeed: 0.07,
+                        sampling: 4,
+                        on: {
+                            init: (instance) => console.log('Content title particles initialized!')
+                        }
+                    })
+                );
+            }
+
+            // 6. Second Background Effect - Different color scheme
+            if (document.querySelector('.particle-background-2')) {
+                const backgroundGeometry2 = createCirclePattern(0.4, 24);
+                particleEffects.push(
+                    particlesGL({
+                        target: '.particle-background-2',
+                        geometry: backgroundGeometry2,
+                        character: '◉',
+                        particleSize: 0.025,
+                        particleColor: 'rgba(255,255,255,0.4)',
+                        tilt: false,
+                        displaceStrength: 0.4,
+                        displaceRadius: 0.1,
+                        velocityInfluence: 0.3,
+                        returnSpeed: 0.06,
+                        on: {
+                            init: (instance) => console.log('Second background particles initialized!')
+                        }
+                    })
+                );
+            }
+
+            // 7. Demo Section Title - Large impactful text
+            if (document.querySelector('.particle-section-demo')) {
+                particleEffects.push(
+                    particlesGL({
+                        target: '.particle-section-demo',
+                        character: '★',
+                        particleSize: 0.07,
+                        particleColor: '#ffffff',
+                        tilt: true,
+                        tiltFactor: 0.4,
+                        tiltSpeed: 0.05,
+                        displaceStrength: 1.2,
+                        displaceRadius: 0.18,
+                        velocityInfluence: 0.7,
+                        returnSpeed: 0.03,
+                        sampling: 3,
+                        on: {
+                            init: (instance) => console.log('Demo section particles initialized!')
+                        }
+                    })
+                );
+            }
+
+            // 8. Demo Title Effect
+            if (document.querySelector('.particle-demo-title')) {
+                particleEffects.push(
+                    particlesGL({
+                        target: '.particle-demo-title',
+                        character: '◆',
+                        particleSize: 0.05,
+                        particleColor: '#ff6b6b',
+                        tilt: true,
+                        tiltFactor: 0.25,
+                        displaceStrength: 0.9,
+                        displaceRadius: 0.14,
+                        returnSpeed: 0.04,
+                        sampling: 3,
+                        on: {
+                            init: (instance) => console.log('Demo title particles initialized!')
+                        }
+                    })
+                );
+            }
+
+            console.log(`✅ Initialized ${particleEffects.length} particle effects!`);
+        }
+
+        // Helper function to create grid geometry
+        function createGridGeometry(width, height, cols, rows) {
+            const positions = [];
+            const stepX = width / (cols - 1);
+            const stepY = height / (rows - 1);
+
+            for (let i = 0; i < rows; i++) {
+                for (let j = 0; j < cols; j++) {
+                    const x = (j * stepX) - (width / 2);
+                    const y = (i * stepY) - (height / 2);
+                    positions.push(x, y, 0);
+                }
+            }
+
+            return positions;
+        }
+
+        // Helper function to create circle pattern
+        function createCirclePattern(radius, points) {
+            const positions = [];
+            const angleStep = (Math.PI * 2) / points;
+
+            for (let i = 0; i < points; i++) {
+                const angle = i * angleStep;
+                const x = Math.cos(angle) * radius;
+                const y = Math.sin(angle) * radius;
+                positions.push(x, y, 0);
+            }
+
+            return positions;
+        }
+
+        // Setup scroll animations
+        function setupScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe elements for scroll animation
+            document.querySelectorAll('.animate-on-scroll').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // Cleanup function
+        function cleanupParticles() {
+            particleEffects.forEach(effect => {
+                if (effect && typeof effect.cleanup === 'function') {
+                    effect.cleanup();
+                }
+            });
+            particleEffects = [];
+        }
+
+        // Cleanup on page unload
+        window.addEventListener('beforeunload', cleanupParticles);
+
+        // Optional: Add development controls
+        if (typeof lil !== 'undefined') {
+            const gui = new lil.GUI();
+            gui.title('Particle Controls');
+            
+            const globalControls = {
+                particleSize: 0.04,
+                displaceStrength: 0.8,
+                returnSpeed: 0.05,
+                updateAll: function() {
+                    particleEffects.forEach(effect => {
+                        if (effect && effect.updateOptions) {
+                            effect.updateOptions({
+                                particleSize: this.particleSize,
+                                displaceStrength: this.displaceStrength,
+                                returnSpeed: this.returnSpeed
+                            });
+                        }
+                    });
+                }
+            };
+
+            gui.add(globalControls, 'particleSize', 0.01, 0.1, 0.005).onChange(() => globalControls.updateAll());
+            gui.add(globalControls, 'displaceStrength', 0, 2, 0.1).onChange(() => globalControls.updateAll());
+            gui.add(globalControls, 'returnSpeed', 0.01, 0.1, 0.005).onChange(() => globalControls.updateAll());
+            
+            gui.close();
+        }
+    </script>
+</body>
+</html>
