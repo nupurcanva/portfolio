@@ -816,17 +816,8 @@ html {
     gap: 8px;
 }
 
-.experience-card:first-child {
-    height: 360px;
-}
-
-.experience-card:nth-child(2) {
-    height: 390px;
-}
-
-.experience-card:last-child {
-    height: 325px;
-}
+/* Allow experience cards to grow with content */
+.resume-column .experience-card { height: auto; }
 
 .company-tag {
     background-color: #000;
@@ -858,6 +849,9 @@ html {
     margin: 0;
 }
 
+/* Add a little offset below the company pill for the first paragraph */
+.experience-card > p:first-of-type { margin-top: 10px; }
+
 .date-range {
     display: flex;
     align-items: center;
@@ -867,6 +861,9 @@ html {
     margin-top: auto;
     position: relative;
 }
+
+/* Ensure timeline sits inside the card with spacing from bottom */
+.experience-card .date-range { margin-bottom: 8px; }
 
 .date-line {
     flex-grow: 1;
