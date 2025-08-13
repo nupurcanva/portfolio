@@ -60,9 +60,9 @@
                         <h2>🚀 Project Overview</h2>
                         <p>As <strong>Senior Product Designer</strong> leading Canva's AI Assistant integrations company goal, I drove the design strategy for one of the most critical initiatives in Canva's history - transforming our platform from a standalone design tool into essential infrastructure for AI-powered creative workflows. This H2 2025 initiative emerged from a fundamental market shift that disrupted design's future while simultaneously presenting our greatest growth opportunity. ChatGPT had risen from just 1% to 5% as users' preferred starting point for searches in less than a year. <strong>This seismic shift meant that the very nature of how people approached creative work was changing, and Canva needed to evolve.</strong></p>
                         
-                        <p>The urgency of this project became clear when we analyzed our existing CanvaGPT plugin performance. While it accounted for an impressive chunk of Canva AI usage with 17 million total uses and 577k monthly active users, we were capturing less than 1% of ChatGPT's massive user base. The most striking finding was the 0.7% user overlap between platforms, indicating that we were essentially serving two completely different user populations. This presented both an existential threat—users might never discover Canva if they started their creative journey in AI assistants—and a massive untapped growth opportunity of millions of potential new users.</p>
+                        <p>The urgency of this project became clear when we analyzed our existing CanvaGPT plugin performance. While it accounted for an impressive chunk of Canva AI usage with 17 million total uses and 577k monthly active users, we were capturing less than 1% of ChatGPT's massive user base. The most striking finding was the <mark>0.7% user overlap between platforms</mark>, indicating that we were essentially serving two completely different user populations. This presented both an existential threat—users might never discover Canva if they started their creative journey in AI assistants—and a massive untapped growth opportunity of millions of potential new users.</p>
                         
-                        <p>Working as the Design Lead for the Integration Platform & Products team within the Ecosystem SuperGroup, I collaborated with Product Lead Susan, Engineering Lead Dan, and a core team including Research Lead Marcello, Data Analyst Chhaya, TPM David, and PMM Erin. Beyond this core team, the project required coordination across 15+ engineers spanning eight different teams: Ecosystem, GenAI, Editing Platform and Growth. The timeline was aggressive—we had from June to December 2025 to achieve feature parity with Canva AI across external AI assistant platforms, with our major Droptober 2025 launch serving as the critical milestone.</p>
+                        <p>Working as the Design Lead for the Integration Platform & Products team within the Ecosystem SuperGroup, I collaborated with Product Lead Susan, Engineering Lead Dan, and a core team including Research Lead Marcello, Data Analyst Chhaya, TPM David, and PMM Erin. Beyond this core team, the project required coordination across <mark>15+ engineers spanning eight different teams</mark>: Ecosystem, GenAI, Editing Platform and Growth. The timeline was aggressive—we had from June to December 2025 to achieve feature parity with Canva AI across external AI assistant platforms, with our major Droptober 2025 launch serving as the critical milestone.</p>
                     </div>
 
                     <!-- Role and Outcomes -->
@@ -135,6 +135,13 @@
                                 <li><strong>Brand Consistency Challenges</strong>: No ability to apply brand guidelines or maintain visual consistency across AI-generated designs</li>
                             </ol>
                         </div>
+                        
+                        <p><strong>What does the existing experience look like in ChatGPT?</strong></p>
+                        <div class="section-image">
+                            <video src="assets/images/Designing the Canva for ChatGPT and Claude integra 2464d51e18d7808ba71df65e4dd72dee/current.mp4" controls class="content-image">
+                                <p>Video showing current ChatGPT experience</p>
+                            </video>
+                        </div>
                     </div>
 
                     <!-- Data Analysis -->
@@ -149,6 +156,39 @@
                         <h3>Key Findings That Shaped Our Strategy</h3>
                         <p>My analysis of 2.4 million monthly designs generated through CanvaGPT revealed critical insights:</p>
                         
+                        <div class="simple-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Design Type</th>
+                                        <th>% of Prompts</th>
+                                        <th>Click-Through Rate</th>
+                                        <th>Completion Rate</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Presentations</td>
+                                        <td>15%</td>
+                                        <td>99.6%</td>
+                                        <td>9%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Social Media</td>
+                                        <td>15%</td>
+                                        <td>90%</td>
+                                        <td>9%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Logos</td>
+                                        <td>11.1%</td>
+                                        <td>42%</td>
+                                        <td>5%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
                         <div class="callout">
                             <div class="callout-icon">💡</div>
                             <div class="callout-content">
@@ -157,16 +197,15 @@
                         </div>
                         
                         <h3>The Opportunity Hidden in the Data</h3>
-                        <ul>
-                            <li><strong>0.7% user overlap</strong> between ChatGPT and Canva users revealed a massive untapped audience already comfortable with AI-powered workflows.</li>
-                            <li><strong>99.6% click-through rate</strong> for presentations demonstrated exceptionally strong user intent when the right content appeared.</li>
-                            <li><strong>Less than 1%</strong> of ChatGPT's monthly active users were generating Canva designs, pointing to significant discovery and integration challenges.</li>
-                        </ul>
+                        <p><strong>0.7% user overlap</strong> between ChatGPT and Canva users revealed a massive untapped audience already comfortable with AI-powered workflows.</p>
+                        <p><strong>99.6% click-through rate</strong> for presentations demonstrated exceptionally strong user intent when the right content appeared.</p>
+                        <p><strong>Less than 1%</strong> of ChatGPT's monthly active users were generating Canva designs, pointing to significant discovery and integration challenges.</p>
+                        <p>These insights directly informed our strategy to embed Canva natively within AI assistant workflows, prioritizing presentations and social media—the use cases with highest engagement and completion rates.</p>
                         
                         <div class="callout">
                             <div class="callout-icon">💡</div>
                             <div class="callout-content">
-                                Most concerning: only <strong>38% of queries resulted in actual AI-generated designs</strong>. The majority defaulted to template suggestions, failing to deliver on the core promise of AI-assisted design creation.
+                                Most concerning: only <mark>38% of queries resulted in actual AI-generated designs</mark>. The majority defaulted to template suggestions, failing to deliver on the core promise of AI-assisted design creation.
                             </div>
                         </div>
                     </div>
@@ -174,6 +213,38 @@
                     <!-- Research Process -->
                     <div class="content-section">
                         <h2>🔍 Discovery & Research Process</h2>
+                        
+                        <h3>Rapid User Research: Understanding AI-Assisted Design Needs</h3>
+                        <p><strong>Research Methodology</strong></p>
+                        <p>I conducted a comprehensive research program including 5 user interviews (20 minutes each), analysis of existing CanvaGPT feedback, and review of Canva AI usage patterns to identify critical user experience gaps.</p>
+                        
+                        <p><strong>Key Insights</strong></p>
+                        <div class="journey-steps">
+                            <div class="journey-step">
+                                <div class="journey-step-content">
+                                    <div class="journey-step-text">
+                                        <h4>Conversational Limitations</h4>
+                                        <p>Users expected ongoing collaboration but received one-off outputs</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="journey-step">
+                                <div class="journey-step-content">
+                                    <div class="journey-step-text">
+                                        <h4>Discovery Challenges</h4>
+                                        <p>Less than 1% of ChatGPT users knew Canva integration existed</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="journey-step">
+                                <div class="journey-step-content">
+                                    <div class="journey-step-text">
+                                        <h4>Asset Accessibility Gap</h4>
+                                        <p>No access to users' existing Canva assets meant starting from scratch every time</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         
                         <h3>Comprehensive User Journey Mapping workshop</h3>
                         <p>On June 23, I facilitated a cross-functional journey mapping workshop focused on a small business marketer creating multi-platform content while maintaining brand consistency.</p>
@@ -201,24 +272,16 @@
                             <div class="journey-step">
                                 <div class="journey-step-content">
                                     <div class="journey-step-text">
-                                        <h4>Week 1</h4>
-                                        <p>Baseline behavior observation using current CanvaGPT</p>
+                                        <h4>Goals of the Study</h4>
+                                        <p>Understand current and ideal workflows with CanvaGPT; Identify functionality gaps; Explore transitions and delegation preferences</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="journey-step">
                                 <div class="journey-step-content">
                                     <div class="journey-step-text">
-                                        <h4>Mid-point intervention</h4>
-                                        <p>Concept testing of enhanced integration capabilities</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="journey-step">
-                                <div class="journey-step-content">
-                                    <div class="journey-step-text">
-                                        <h4>Week 2</h4>
-                                        <p>Post-concept usage tracking and iteration feedback</p>
+                                        <h4>Study Structure</h4>
+                                        <p>Week 1: Baseline behavior; Mid-point: Concept testing; Week 2: Post-concept usage tracking</p>
                                     </div>
                                 </div>
                             </div>
@@ -231,7 +294,7 @@
                         <div class="callout">
                             <div class="callout-icon">💡</div>
                             <div class="callout-content">
-                                <strong>CanvaGPT users want a creative brainstorming partner, but get a broken document generator instead.</strong>
+                                <mark>CanvaGPT users want a creative brainstorming partner, but get a broken document generator instead.</mark>
                             </div>
                         </div>
                         
@@ -288,6 +351,7 @@
                             <li>Build Lasting Relationships: Design features that improve with repeated use.</li>
                         </ol>
                         
+                        <p><strong>Later on, we combined them with the product principles to have 4 principles that help us with decision making:</strong></p>
                         <div class="section-image">
                             <img src="assets/images/Designing the Canva for ChatGPT and Claude integra 2464d51e18d7808ba71df65e4dd72dee/16.png" alt="Final design principles" class="content-image">
                         </div>
@@ -309,6 +373,7 @@
                         </div>
                         
                         <h3>Future State Vision</h3>
+                        <p><strong>What does the vision experience look like in ChatGPT?</strong></p>
                         <p>Through collaborative design sessions, I developed a vision for seamless AI-integrated design creation:</p>
                         <ol>
                             <li><strong>Natural AI conversation</strong> → Design intent emerges organically</li>
@@ -341,48 +406,233 @@
                         <h2>🤩 Solution Design: Three Core Capabilities</h2>
                         
                         <h3>1. Auto-Resize Social Posts: Multi-Platform at Scale</h3>
-                        <p><mark>Research showed social media managers maintain 5-7 platforms, each requiring different formats. My solution transformed this hours-long process into a natural conversation: "Create an Instagram post for my coffee shop's summer sale" followed by "Now I need this for Stories and LinkedIn too."</mark></p>
+                        <div class="section-image">
+                            <video src="assets/images/Designing the Canva for ChatGPT and Claude integra 2464d51e18d7808ba71df65e4dd72dee/New_products_(4).mp4" controls class="content-image">
+                                <p>Auto-resize social posts demonstration</p>
+                            </video>
+                        </div>
                         
-                        <p><mark>This wasn't simple cropping—our Magic Resize API ensured intelligent recomposition maintaining visual hierarchy across different aspect ratios. I developed a framework for visual hierarchy preservation considering text legibility, image focal points, and brand element prominence.</mark></p>
+                        <p>Research showed social media managers maintain 5-7 platforms, each requiring different formats. My solution transformed this hours-long process into a natural conversation: "Create an Instagram post for my coffee shop's summer sale" followed by "Now I need this for Stories and LinkedIn too."</p>
                         
-                        <p><mark>My batch preview system solved the challenge of presenting multiple format variations within ChatGPT's text-heavy interface using a compact grid view with highlighted differences.</mark></p>
+                        <p>This wasn't simple cropping—our Magic Resize API ensured intelligent recomposition maintaining visual hierarchy across different aspect ratios. I developed a framework for visual hierarchy preservation considering text legibility, image focal points, and brand element prominence.</p>
+                        
+                        <p>My batch preview system solved the challenge of presenting multiple format variations within ChatGPT's text-heavy interface using a compact grid view with highlighted differences.</p>
                         
                         <h3>2. Brand Kit Application: Automatic Brand Compliance</h3>
-                        <p><mark>SMB owners were spending 30% of design time manually applying brand elements. My solution created an intelligent brand detection system that analyzed conversation context to understand requirements.</mark></p>
+                        <div class="journey-steps">
+                            <div class="journey-step">
+                                <div class="journey-step-content">
+                                    <div class="journey-step-text">
+                                        <h4>Brand Context Detection</h4>
+                                        <p>AI recognizes user's business context from conversation</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="journey-step">
+                                <div class="journey-step-content">
+                                    <div class="journey-step-text">
+                                        <h4>Brand Kit Integration</h4>
+                                        <p>System accesses user's Canva brand assets (colors, fonts, logos)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="journey-step">
+                                <div class="journey-step-content">
+                                    <div class="journey-step-text">
+                                        <h4>Automatic Application</h4>
+                                        <p>AI applies brand elements while maintaining design quality</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         
-                        <p><mark>The system would first check for existing Canva brand kits and intelligently apply elements based on context and intent. For new users, I designed a streamlined creation flow within the AI conversation, generating a basic kit with complementary fonts, color palette, and placeholder logo space.</mark></p>
+                        <div class="section-image">
+                            <video src="assets/images/Designing the Canva for ChatGPT and Claude integra 2464d51e18d7808ba71df65e4dd72dee/New_products_(2).mp4" controls class="content-image">
+                                <p>Brand kit application demonstration</p>
+                            </video>
+                        </div>
                         
-                        <p><mark>I designed a before-and-after comparison interface showing generic designs alongside branded versions, with key elements highlighted. Users could adjust "brand intensity" through natural language.</mark></p>
+                        <div class="section-image">
+                            <video src="assets/images/Designing the Canva for ChatGPT and Claude integra 2464d51e18d7808ba71df65e4dd72dee/New_products_(3).mp4" controls class="content-image">
+                                <p>Brand kit application continued</p>
+                            </video>
+                        </div>
+                        
+                        <p>SMB owners were spending 30% of design time manually applying brand elements. My solution created an intelligent brand detection system that analyzed conversation context to understand requirements.</p>
+                        
+                        <p>The system would first check for existing Canva brand kits and intelligently apply elements based on context and intent. For new users, I designed a streamlined creation flow within the AI conversation, generating a basic kit with complementary fonts, color palette, and placeholder logo space.</p>
+                        
+                        <p>I designed a before-and-after comparison interface showing generic designs alongside branded versions, with key elements highlighted. Users could adjust "brand intensity" through natural language.</p>
                         
                         <h3>3. Tone & Localization: AI-Native Adaptation</h3>
-                        <p><mark>I leveraged AI's natural language understanding to enable conversational design adaptation. When users requested "make this presentation more playful," the system orchestrated multiple changes: switching to rounded fonts, warming colors, adding illustrated elements, and rewriting copy.</mark></p>
+                        <p>I leveraged AI's natural language understanding to enable conversational design adaptation. When users requested "make this presentation more playful," the system orchestrated multiple changes: switching to rounded fonts, warming colors, adding illustrated elements, and rewriting copy.</p>
                         
-                        <p><mark>I developed a framework mapping specific transformation patterns: professional to casual transitions involved simplifying language and warming colors; technical to general added visual metaphors; formal to playful introduced dynamic typography.</mark></p>
+                        <p>I developed a framework mapping specific transformation patterns: professional to casual transitions involved simplifying language and warming colors; technical to general added visual metaphors; formal to playful introduced dynamic typography.</p>
                         
-                        <p><mark>Localization capabilities considered cultural color associations, reading patterns, space requirements for different languages, and locally relevant imagery.</mark></p>
+                        <p>Localization capabilities considered cultural color associations, reading patterns, space requirements for different languages, and locally relevant imagery.</p>
+                        
+                        <h4>Content Strategy Framework</h4>
+                        <ul>
+                            <li><strong>Professional → Casual</strong>: Simplified language, warmer colors, more approachable imagery</li>
+                            <li><strong>Technical → General</strong>: Explained jargon, added visual metaphors, simplified layouts</li>
+                            <li><strong>Formal → Playful</strong>: Dynamic typography, brighter colors, illustrated elements</li>
+                            <li><strong>Local → Global</strong>: Cultural imagery adaptation, text length considerations, color meaning awareness</li>
+                        </ul>
+                    </div>
+
+                    <!-- Technical Innovation -->
+                    <div class="content-section">
+                        <h2>⚙️ Technical Innovation & API Design</h2>
+                        
+                        <h3>Designing for Platform Constraints</h3>
+                        <p>One of the most complex challenges was designing rich design experiences within the limited interface capabilities of AI assistants. <mark>I worked closely with engineering teams to define technical requirements that balanced user experience with platform realities.</mark></p>
+                        
+                        <div class="section-image">
+                            <img src="assets/images/AI assitants/30.png" alt="Technical architecture and API design" class="content-image">
+                        </div>
+                        
+                        <div class="highlight-box">
+                            <p><strong>ChatGPT Interface Constraints:</strong></p>
+                            <ul>
+                                <li>Limited visual preview capabilities</li>
+                                <li>No native image editing tools</li>
+                                <li>Restricted user interface elements</li>
+                                <li>Text-based interaction primary mode</li>
+                            </ul>
+                        </div>
+                        
+                        <h4>Design Solutions</h4>
+                        <ul>
+                            <li><strong>Compact Previews</strong>: Designed thumbnail system that conveyed essential design information</li>
+                            <li><strong>Descriptive Summaries</strong>: Created AI-generated text descriptions that supplemented visual previews</li>
+                            <li><strong>Progressive Disclosure</strong>: Structured information hierarchy to work within chat limitations</li>
+                            <li><strong>Action Buttons</strong>: Designed minimal button system for key actions (Edit in Canva, Generate Variations, Apply Changes)</li>
+                        </ul>
+                        
+                        <h3>API Specification Design</h3>
+                        <p>I collaborated with engineering teams to define API requirements that would enable the envisioned user experiences:</p>
+                        
+                        <h4>Design Content Read API</h4>
+                        <ul>
+                            <li>Ability to analyze existing Canva designs and extract text, layout, and style information</li>
+                            <li>Support for brand asset recognition and application</li>
+                            <li>Metadata preservation for design context</li>
+                        </ul>
+                        
+                        <h4>Design Editing API</h4>
+                        <ul>
+                            <li>Text modification capabilities (insert, update, delete)</li>
+                            <li>Basic layout adjustments for format changes</li>
+                            <li>Brand element application and modification</li>
+                            <li>Batch operation support for multi-format designs</li>
+                        </ul>
+                        
+                        <h4>Preview Generation API</h4>
+                        <ul>
+                            <li>Lightweight thumbnail creation optimized for chat interfaces</li>
+                            <li>Multiple format preview support</li>
+                            <li>Real-time update capabilities for iterative design changes</li>
+                        </ul>
+                        
+                        <h3>Context Preservation System</h3>
+                        <p>I designed a system for maintaining design context across AI assistant sessions and handoffs to Canva:</p>
+                        
+                        <h4>Session Memory</h4>
+                        <ul>
+                            <li>Conversation history preservation with design decisions</li>
+                            <li>User preference learning and application</li>
+                            <li>Brand guideline retention across sessions</li>
+                        </ul>
+                        
+                        <h4>Handoff Context</h4>
+                        <ul>
+                            <li>Full design iteration history transfer to Canva</li>
+                            <li>User intent and modification requests preservation</li>
+                            <li>Seamless continuation of design work in native Canva interface</li>
+                        </ul>
                     </div>
 
                     <!-- Cross-Functional Leadership -->
                     <div class="content-section">
-                        <h2>🤝 Cross-Functional Leadership & Execution</h2>
+                        <h2>🤝 Cross-Functional Collaboration & Leadership</h2>
                         
-                        <h3>Orchestrating Complex Stakeholder Alignment</h3>
-                        <p><mark>I led alignment across three SuperGroup leads and eight technical domains through interactive sessions:</mark></p>
+                        <h3>Stakeholder Alignment Process</h3>
+                        <p>Leading this complex, multi-team initiative required extensive stakeholder management and alignment. I facilitated regular workshops and decision-making sessions with:</p>
                         
-                        <ol>
-                            <li><mark>The Company Goal Kickoff had 50+ stakeholders using CanvaGPT to create presentations, making pain points visceral.</mark></li>
-                            <li><mark>The GenAI Design Jam aligned two teams on crucial decisions like preserving context between platforms.</mark></li>
-                            <li><mark>The Journey Mapping Workshop built shared empathy for user challenges across disciplines.</mark></li>
-                        </ol>
+                        <div class="section-image">
+                            <img src="assets/images/AI assitants/33.png" alt="Cross-functional collaboration framework" class="content-image">
+                        </div>
+                        
+                        <h4>Executive Stakeholders</h4>
+                        <ul>
+                            <li>Presented strategic vision and business case to company leadership</li>
+                            <li>Aligned on success metrics and project priorities</li>
+                            <li>Secured resources and organizational buy-in for cross-team collaboration</li>
+                        </ul>
+                        
+                        <h4>Engineering Teams (Ecosystem, GenAI, Editing Platform, Ripple, DMS)</h4>
+                        <ul>
+                            <li>Collaborated on technical feasibility and API specifications</li>
+                            <li>Defined engineering requirements and implementation timelines</li>
+                            <li>Balanced user experience goals with technical constraints</li>
+                        </ul>
+                        
+                        <h4>Product Teams (T&E, Media Platform, User Platform)</h4>
+                        <ul>
+                            <li>Aligned on product strategy and feature prioritization</li>
+                            <li>Coordinated launch timelines and dependency management</li>
+                            <li>Defined success metrics and measurement frameworks</li>
+                        </ul>
+                        
+                        <h3>Workshop Facilitation</h3>
+                        <p>I designed and facilitated multiple cross-functional workshops to build consensus and drive decision-making:</p>
+                        
+                        <h4>Vision Alignment Workshop</h4>
+                        <ul>
+                            <li>Established shared understanding of user problems and opportunities</li>
+                            <li>Created unified product vision across multiple teams</li>
+                            <li>Defined success criteria and measurement approaches</li>
+                        </ul>
+                        
+                        <h4>Technical Design Workshop</h4>
+                        <ul>
+                            <li>Collaborated with engineering teams to define API requirements</li>
+                            <li>Balanced user experience needs with technical feasibility</li>
+                            <li>Established implementation priorities and timelines</li>
+                        </ul>
+                        
+                        <h4>Use Case Prioritization Workshop</h4>
+                        <ul>
+                            <li>Facilitated stakeholder consensus on feature prioritization</li>
+                            <li>Balanced user value, business impact, and engineering complexity</li>
+                            <li>Created shared roadmap and delivery milestones</li>
+                        </ul>
                         
                         <h3>Communication Architecture for Distributed Teams</h3>
-                        <p><mark>I established multiple communication channels:</mark></p>
+                        <p>I established multiple communication channels:</p>
                         <ol>
-                            <li><mark>Monday Async Snapshots: Visual updates of weekly focus areas, required decisions, and achievements.</mark></li>
-                            <li><mark>Weekly Live Project Syncs: Working sessions to resolve blockers and make technical decisions.</mark></li>
-                            <li><mark>Fortnightly Design Syncs: Deep dives into design explorations and user insights.</mark></li>
-                            <li><mark>Leadership Pulse updates: Three-bullet summaries for executives.</mark></li>
+                            <li><strong>Monday Async Snapshots</strong>: Visual updates of weekly focus areas, required decisions, and achievements.</li>
+                            <li><strong>Weekly Live Project Syncs</strong>: Working sessions to resolve blockers and make technical decisions.</li>
+                            <li><strong>Fortnightly Design Syncs</strong>: Deep dives into design explorations and user insights.</li>
+                            <li><strong>Leadership Pulse updates</strong>: Three-bullet summaries for executives.</li>
                         </ol>
+                        
+                        <h3>Dependency Management</h3>
+                        <p>Given the complex technical dependencies across multiple engineering teams, I created systems for tracking and managing cross-team coordination:</p>
+                        
+                        <h4>Dependency Mapping</h4>
+                        <ul>
+                            <li>Visualized technical dependencies between teams and deliverables</li>
+                            <li>Identified critical path items and potential bottlenecks</li>
+                            <li>Created contingency plans for technical risks</li>
+                        </ul>
+                        
+                        <h4>Regular Check-ins</h4>
+                        <ul>
+                            <li>Established weekly cross-team sync meetings</li>
+                            <li>Created shared documentation for progress tracking</li>
+                            <li>Facilitated rapid decision-making for blocking issues</li>
+                        </ul>
                     </div>
 
                     <!-- Prototyping -->
@@ -390,19 +640,20 @@
                         <h2>Prototyping & alignment</h2>
                         
                         <h3>Master Prototype Development</h3>
-                        <p><mark>I led the creation of comprehensive prototypes covering 3 distinct user flows. The brand application prototype demonstrated intelligent application of guidelines; the multi-format resize prototype showed content prioritization across different aspect ratios.</mark></p>
+                        <p>I led the creation of comprehensive prototypes covering 3 distinct user flows. The brand application prototype demonstrated intelligent application of guidelines; the multi-format resize prototype showed content prioritization across different aspect ratios.</p>
                         
                         <h3>Key Alignment Points with Gen AI teams</h3>
                         <div class="section-image">
                             <img src="assets/images/Designing the Canva for ChatGPT and Claude integra 2464d51e18d7808ba71df65e4dd72dee/20.png" alt="Key alignment points" class="content-image">
                         </div>
                         
+                        <p><strong>Handover to Canva AI Chat Window</strong></p>
                         <div class="journey-steps">
                             <div class="journey-step">
                                 <div class="journey-step-content">
                                     <div class="journey-step-text">
-                                        <h4>Handover to Canva AI Chat Window</h4>
-                                        <p>Auto-open Canva AI when landing from ChatGPT, pass conversation context, show the prompt sent from ChatGPT</p>
+                                        <h4>Auto-open Canva AI</h4>
+                                        <p>When landing from ChatGPT; Pass conversation context to continue seamlessly; Show the prompt sent from ChatGPT to Canva AI</p>
                                     </div>
                                 </div>
                             </div>
@@ -430,44 +681,137 @@
                         <h2>🚀 Impact & Outcomes</h2>
                         
                         <h3>Measurable Business Impact</h3>
-                        <p><mark>Our financial modeling projected transformative business results: 5x increase in AI-driven design usage.</mark></p>
+                        <p>The strategic framework I designed positioned Canva for significant growth in the AI-powered creative landscape:</p>
+                        
+                        <div class="highlight-box">
+                            <p><strong>Key Business Outcomes:</strong> Transformed Canva from standalone tool to AI ecosystem infrastructure, capturing value in next-generation workflows while protecting against displacement.</p>
+                        </div>
+                        
+                        <div class="journey-steps">
+                            <div class="journey-step">
+                                <div class="journey-step-content">
+                                    <div class="journey-step-text">
+                                        <h4>Projected 5x increase</h4>
+                                        <p>in AI-driven design usage</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="journey-step">
+                                <div class="journey-step-content">
+                                    <div class="journey-step-text">
+                                        <h4>Additional 4.7M MAU</h4>
+                                        <p>through native AI assistant integration</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="journey-step">
+                                <div class="journey-step-content">
+                                    <div class="journey-step-text">
+                                        <h4>$3.9M ARR uplift</h4>
+                                        <p>annually from expanded user base</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="journey-step">
+                                <div class="journey-step-content">
+                                    <div class="journey-step-text">
+                                        <h4>Protected market share</h4>
+                                        <p>against native AI design generation</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h3>Technical Achievements</h3>
+                        <p>My design work directly informed:</p>
+                        <ul>
+                            <li><strong>4 major API developments</strong> (Resize, Brand Kit, Editing, Autofill)</li>
+                            <li><strong>Cross-platform integration</strong> with ChatGPT, Claude, and future AI assistants</li>
+                            <li><strong>Scalable design system</strong> for AI interface consistency</li>
+                        </ul>
                         
                         <h3>User Experience Transformation</h3>
-                        <p><mark>We reduced the steps from intent to completed design from eight stages to three, achieved 80% design readiness on first generation, supported 3-5 iteration cycles before Canva handoff, and preserved full context across platform transitions.</mark></p>
+                        <div class="callout">
+                            <div class="callout-icon">✨</div>
+                            <div class="callout-content">
+                                <strong>UX Enhancements:</strong> Seamless workflow integration removing friction between AI assistance and design editing, context-aware design generation producing more relevant outputs, and progressive capability disclosure matching user expertise levels.
+                            </div>
+                        </div>
+                        
+                        <p>We reduced the steps from intent to completed design from eight stages to three, achieved 80% design readiness on first generation, supported 3-5 iteration cycles before Canva handoff, and preserved full context across platform transitions.</p>
                         
                         <h3>Organizational Capability Building</h3>
-                        <p><mark>The project transformed Canva's organizational capabilities around platform thinking and API design, established new cross-functional collaboration patterns, and built technical capabilities benefiting future initiatives.</mark></p>
+                        <p>The project transformed Canva's organizational capabilities around platform thinking and API design, established new cross-functional collaboration patterns, and built technical capabilities benefiting future initiatives.</p>
+                        
+                        <div class="callout success">
+                            <div class="callout-icon">💯</div>
+                            <div class="callout-content">
+                                This project positioned Canva not just as a design tool, but as essential infrastructure for the AI-powered creative workflows of the future.
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Challenges & Lessons -->
                     <div class="content-section">
                         <h2>👀 Challenges & Lessons Learned</h2>
                         
-                        <div class="journey-steps">
-                            <div class="journey-step journey-step-blue">
-                                <div class="journey-step-content">
-                                    <div class="journey-step-text">
-                                        <h4>Navigating Platform Constraints</h4>
-                                        <p><mark>I redesigned how we communicated design information, leveraging each platform's strengths while designing seamless transitions between them.</mark></p>
-                                    </div>
-                                </div>
+                        <h3>Navigating Platform Constraints</h3>
+                        <p>Designing within external interfaces required creative solutions to maintain brand consistency while respecting platform guidelines.</p>
+                        
+                        <div class="callout warning">
+                            <div class="callout-icon">⚠️</div>
+                            <div class="callout-content">
+                                <strong>Challenge:</strong> Balancing Canva's brand expression within ChatGPT and Claude's interface constraints required creative compromise.
                             </div>
-                            <div class="journey-step journey-step-green">
-                                <div class="journey-step-content">
-                                    <div class="journey-step-text">
-                                        <h4>Managing Multi-Team Dependencies</h4>
-                                        <p><mark>I treated the project as a series of integrated experiments with regular integration points, allowing teams to maintain momentum even when dependencies were blocked.</mark></p>
-                                    </div>
-                                </div>
+                        </div>
+                        
+                        <h3>Managing Multi-Team Dependencies</h3>
+                        <p>I treated the project as a series of integrated experiments with regular integration points, allowing teams to maintain momentum even when dependencies were blocked.</p>
+                        
+                        <div class="callout">
+                            <div class="callout-icon">🔄</div>
+                            <div class="callout-content">
+                                <strong>Learning:</strong> Early and frequent engineering collaboration was essential for managing API complexity while maintaining user experience quality.
                             </div>
-                            <div class="journey-step journey-step-purple">
-                                <div class="journey-step-content">
-                                    <div class="journey-step-text">
-                                        <h4>Balancing Innovation with Pragmatism</h4>
-                                        <p><mark>I developed an "MVP magic" framework—delivering the minimum viable capability that still felt magical to users, identifying the core value of each feature.</mark></p>
-                                    </div>
-                                </div>
+                        </div>
+                        
+                        <h3>Balancing Innovation with Pragmatism</h3>
+                        <p>I developed an "MVP magic" framework—delivering the minimum viable capability that still felt magical to users, identifying the core value of each feature.</p>
+                        
+                        <div class="callout success">
+                            <div class="callout-icon">💡</div>
+                            <div class="callout-content">
+                                <strong>Solution:</strong> Regular stakeholder updates through visual prototypes and presentation decks kept all teams aligned and moving forward.
                             </div>
+                        </div>
+                        
+                        <h3>Critical Design Insights</h3>
+                        
+                        <div class="highlight-box">
+                            <h4>🤝 AI-Human Collaboration Requires Intentional Handoff Design</h4>
+                            <p>The most critical design decisions weren't about individual features, but about the transition points between AI assistance and human control. Users needed clear understanding of AI capabilities and limitations, with seamless handoff when human creativity was needed.</p>
+                        </div>
+
+                        <div class="highlight-box">
+                            <h4>🔄 Context Preservation is Essential for AI Workflows</h4>
+                            <p>Unlike traditional software where users expect to start fresh, AI workflows depend heavily on conversation context and user intent. <mark>Designing systems that preserve and transfer this context across platforms was crucial for user experience quality.</mark></p>
+                        </div>
+                        
+                        <div class="highlight-box">
+                            <h4>Brand Consistency in AI Generation</h4>
+                            <p>AI generation introduces new challenges for brand compliance, requiring more sophisticated systems for guideline interpretation and application. Users need both automation and control to maintain brand integrity while leveraging AI efficiency.</p>
+                        </div>
+                        
+                        <h3>Future Design Implications</h3>
+                        
+                        <div class="highlight-box">
+                            <h4>The Evolution of Design Tools</h4>
+                            <p>This project provided insights into how design tools will evolve in an AI-first world. <mark>The future lies not in replacing human creativity, but in creating seamless collaboration between AI capabilities and human judgment.</mark></p>
+                        </div>
+                        
+                        <div class="highlight-box">
+                            <h4>AI-Native Design Patterns</h4>
+                            <p>The interaction patterns developed for this project represent early examples of AI-native design - interfaces designed specifically for AI-human collaboration rather than traditional software paradigms adapted for AI.</p>
                         </div>
                     </div>
 
@@ -476,18 +820,74 @@
                         <h2>👀 Future Vision & Strategic Implications</h2>
                         
                         <h3>The Platform Evolution</h3>
-                        <p><mark>This project represented the first phase of Canva's evolution from application to platform, establishing APIs and integration patterns for future AI platforms.</mark></p>
+                        <p>This project represented the first phase of Canva's evolution from application to platform, establishing APIs and integration patterns for future AI platforms.</p>
                         
                         <h3>Organizational Transformation</h3>
-                        <p><mark>The success catalyzed broader organizational transformation, spreading platform-first thinking and shifting how Canva viewed competition and partnership.</mark></p>
+                        <p>The success catalyzed broader organizational transformation, spreading platform-first thinking and shifting how Canva viewed competition and partnership.</p>
+                        
+                        <h3>Immediate Roadmap (H2 2025)</h3>
+                        <div class="journey-steps roadmap-steps">
+                            <div class="journey-step roadmap-step-blue">
+                                <div class="journey-step-content">
+                                    <div class="journey-step-text">
+                                        <h4>🚀 Launching soon</h4>
+                                        <p>Core functionality with ChatGPT and Claude</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="journey-step roadmap-step-orange">
+                                <div class="journey-step-content">
+                                    <div class="journey-step-text">
+                                        <h4>⏳ Coming next</h4>
+                                        <p>Enable complex media editing within AI interfaces</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="journey-step roadmap-step-purple">
+                                <div class="journey-step-content">
+                                    <div class="journey-step-text">
+                                        <h4>🔮 Coming later</h4>
+                                        <p>Team library access for business users</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3>Long-term Vision (2026+)</h3>
+                        <div class="highlight-box">
+                            <h4>🤫 Under wraps</h4>
+                            <p>Exciting developments in the pipeline that will further revolutionize AI-design collaboration</p>
+                        </div>
+                        
+                        <h3>Key Takeaways & Strategic Insights</h3>
+                        
+                        <div class="highlight-box">
+                            <h4>💡 Design Evolution: From Features to Ecosystems</h4>  
+                            <p>This project shifted my perspective from feature-focused design to ecosystem-focused design thinking, emphasizing platform integration over isolated functionality. <mark>Rather than designing isolated features, I learned to design for ecosystem integration and platform thinking.</mark></p>
+                        </div>
+
+                        <h4>Strategic Design Principles for Future Work</h4>
+                        <ul>
+                            <li><strong>🌊 Design for Workflows, Not Features:</strong> Users don't want another tool, they want their existing workflows enhanced.</li>
+                            <li><strong>🎯 Strategic Design Matters:</strong> Sometimes the biggest design decisions happen at the strategy level, not the interface level.</li>
+                            <li><strong>🤝 Collaboration is Core:</strong> Complex platform integration requires deep collaboration across disciplines and organizations.</li>
+                            <li><strong>📈 Progressive Enhancement Works:</strong> Breaking ambitious visions into achievable phases maintains momentum while building toward transformative outcomes.</li>
+                        </ul>
+                        
+                        <div class="callout">
+                            <div class="callout-icon">🚀</div>
+                            <div class="callout-content">
+                                <p><strong>This case study represents ongoing work as of July 2025.</strong> The full impact of these design decisions will be measured as the integrations launch and scale throughout H2 2025 and beyond.</p>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Personal Reflection -->
                     <div class="content-section">
                         <h2>💜 Personal Reflection</h2>
-                        <p><mark>Leading this project transformed my approach to design leadership—from crafting pixels to designing systems, orchestrating collaboration, and translating between technical possibility and user need.</mark></p>
+                        <p>Leading this project transformed my approach to design leadership—from crafting pixels to designing systems, orchestrating collaboration, and translating between technical possibility and user need.</p>
                         
-                        <p><mark>The project proved that Canva's future lies not in being a destination but in becoming essential infrastructure embedded throughout the creative workflow, defining the future of design in an AI-powered world.</mark></p>
+                        <p>The project proved that Canva's future lies not in being a destination but in becoming essential infrastructure embedded throughout the creative workflow, defining the future of design in an AI-powered world.</p>
                     </div>
 </div>
         </section>
