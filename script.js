@@ -458,6 +458,7 @@ class ProjectAuth {
         this.storageKey = 'portfolio_project_access';
         this.protectedProjects = [
             'integrations-chatgpt-claude.html',
+            'creating-ecosystem-developer-archetypes.html',
             'smart-devops-experiences-jira.html',
             'bitbucket-pipelines-experience-vision.html',
             'multi-platform-bitbucket-pipelines-runners.html'
