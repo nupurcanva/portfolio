@@ -2827,6 +2827,12 @@ mark {
     }
 }
 
+/* Developer Archetypes project sticker positioning */
+.project-sticker-archetypes {
+    top: -35px;
+    transform: scale(0.8);
+}
+
 /* Fix numbered list alignment */
 .content-section ol {
     padding-left: 0;
